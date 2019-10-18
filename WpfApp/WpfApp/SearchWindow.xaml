@@ -1,0 +1,53 @@
+﻿<Window x:Class="WpfApp.SearchWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp"
+        mc:Ignorable="d"
+        Title="Search" Height="159.377" Width="424.264">
+    <Grid>
+        <TextBox x:Name="uxSearchContents1" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Margin="10,10,0,0"/>
+        <TextBox x:Name="uxSearchContents2" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Margin="10,38,0,0"/>
+        <TextBox x:Name="uxSearchContents3" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Margin="10,66,0,0"/>
+        <TextBox x:Name="uxSearchContents4" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Margin="10,94,0,0"/>
+        <ComboBox x:Name="uxSearchTerm1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="135,11,0,0">
+            <ComboBoxItem Content="Owner"/>
+            <ComboBoxItem Content="Breed"/>
+            <ComboBoxItem Content="Animal Name"/>
+            <ComboBoxItem Content="Code"/>
+            <ComboBoxItem Content="Can #"/>
+            <ComboBoxItem Content="Town"/>
+            <ComboBoxItem Content="State"/>
+        </ComboBox>
+        <ComboBox x:Name="uxSearchTerm2" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="135,39,0,0">
+            <ComboBoxItem Content="Owner"/>
+            <ComboBoxItem Content="Breed"/>
+            <ComboBoxItem Content="Animal Name"/>
+            <ComboBoxItem Content="Code"/>
+            <ComboBoxItem Content="Can #"/>
+            <ComboBoxItem Content="Town"/>
+            <ComboBoxItem Content="State"/>
+        </ComboBox>
+        <ComboBox x:Name="uxSearchTerm3" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="135,67,0,0">
+            <ComboBoxItem Content="Owner"/>
+            <ComboBoxItem Content="Breed"/>
+            <ComboBoxItem Content="Animal Name"/>
+            <ComboBoxItem Content="Code"/>
+            <ComboBoxItem Content="Can #"/>
+            <ComboBoxItem Content="Town"/>
+            <ComboBoxItem Content="State"/>
+        </ComboBox>
+        <ComboBox x:Name="uxSearchTerm4" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="135,95,0,0">
+            <ComboBoxItem Content="Owner"/>
+            <ComboBoxItem Content="Breed"/>
+            <ComboBoxItem Content="Animal Name"/>
+            <ComboBoxItem Content="Code"/>
+            <ComboBoxItem Content="Can #"/>
+            <ComboBoxItem Content="Town"/>
+            <ComboBoxItem Content="State"/>
+        </ComboBox>
+        <Button x:Name="uxSearch" Content="Search" HorizontalAlignment="Left" VerticalAlignment="Top" Width="87" Margin="319,97,0,0"/>
+
+    </Grid>
+</Window>

@@ -1,0 +1,17 @@
+c:\users\schilmjr\source\repos\WpfApp\WpfApp\bin\Debug\WpfApp.exe.config
+c:\users\schilmjr\source\repos\WpfApp\WpfApp\bin\Debug\WpfApp.exe
+c:\users\schilmjr\source\repos\WpfApp\WpfApp\bin\Debug\WpfApp.pdb
+c:\users\schilmjr\source\repos\WpfApp\WpfApp\obj\Debug\KABSUApp.csprojAssemblyReference.cache
+c:\users\schilmjr\source\repos\WpfApp\WpfApp\obj\Debug\MainWindow.g.cs
+c:\users\schilmjr\source\repos\WpfApp\WpfApp\obj\Debug\App.g.cs
+c:\users\schilmjr\source\repos\WpfApp\WpfApp\obj\Debug\WpfApp_MarkupCompile.cache
+c:\users\schilmjr\source\repos\WpfApp\WpfApp\obj\Debug\WpfApp_MarkupCompile.lref
+c:\users\schilmjr\source\repos\WpfApp\WpfApp\obj\Debug\MainWindow.baml
+c:\users\schilmjr\source\repos\WpfApp\WpfApp\obj\Debug\WpfApp.g.resources
+c:\users\schilmjr\source\repos\WpfApp\WpfApp\obj\Debug\WpfApp.Properties.Resources.resources
+c:\users\schilmjr\source\repos\WpfApp\WpfApp\obj\Debug\KABSUApp.csproj.GenerateResource.cache
+c:\users\schilmjr\source\repos\WpfApp\WpfApp\obj\Debug\KABSUApp.csproj.CoreCompileInputs.cache
+c:\users\schilmjr\source\repos\WpfApp\WpfApp\obj\Debug\WpfApp.exe
+c:\users\schilmjr\source\repos\WpfApp\WpfApp\obj\Debug\WpfApp.pdb
+c:\users\schilmjr\source\repos\WpfApp\WpfApp\obj\Debug\SearchWindow.g.cs
+c:\users\schilmjr\source\repos\WpfApp\WpfApp\obj\Debug\SearchWindow.baml
