@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-c:\users\schilmjr\source\repos\WpfApp\WpfApp\obj\Debug\
+C:\Users\shant\Downloads\KABSU-Inventory-App-master\KABSU-Inventory-App-master\WpfApp\WpfApp\obj\Debug\
 WpfApp
 none
 false
 DEBUG;TRACE
-c:\users\schilmjr\source\repos\WpfApp\WpfApp\App.xaml
-21713697755
+C:\Users\shant\Downloads\KABSU-Inventory-App-master\KABSU-Inventory-App-master\WpfApp\WpfApp\App.xaml
+4-16000490
 
-10-768040652
+12-405063322
 131569487696
-MainWindow.xaml;SearchWindow.xaml;
+MainWindow.xaml;RecordWindow.xaml;SearchWindow.xaml;SearchWindowResults.xaml;
 
 True
 
