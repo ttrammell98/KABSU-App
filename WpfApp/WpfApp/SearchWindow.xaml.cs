@@ -19,6 +19,7 @@ namespace WpfApp
     /// </summary>
     public partial class SearchWindow : Window
     {
+        SearchWindowResults windowResults;
         public SearchWindow()
         {
             InitializeComponent();
@@ -27,6 +28,13 @@ namespace WpfApp
         private void UxSearchTerm1_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
+        }
+
+        private void UxSearch_Click(object sender, RoutedEventArgs e)
+        {
+            windowResults = new SearchWindowResults();
+            windowResults.Show();
+            this.Close();
         }
     }
 }

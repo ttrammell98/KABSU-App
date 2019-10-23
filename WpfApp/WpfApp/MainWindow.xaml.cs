@@ -20,6 +20,8 @@ namespace WpfApp
     /// </summary>
     public partial class MainWindow : Window
     {
+        RecordWindow recordWindow;
+        SearchWindow searchWindow;
         public MainWindow()
         {
             InitializeComponent();
@@ -27,12 +29,14 @@ namespace WpfApp
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-
+            recordWindow = new RecordWindow();
+            recordWindow.Show();
+            this.Close();
         }
 
         private void UxModifyRecord_Click(object sender, RoutedEventArgs e)
         {
-            SearchWindow searchWindow = new SearchWindow();
+            searchWindow = new SearchWindow();
             searchWindow.Show();
             this.Close();
         }

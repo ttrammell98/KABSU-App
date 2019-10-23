@@ -51,3 +51,7 @@ C:\Users\shant\source\repos\KABSU-Inventory-App\WpfApp\WpfApp\obj\Debug\KABSUApp
 C:\Users\shant\source\repos\KABSU-Inventory-App\WpfApp\WpfApp\obj\Debug\KABSUApp.csproj.CoreCompileInputs.cache
 C:\Users\shant\source\repos\KABSU-Inventory-App\WpfApp\WpfApp\obj\Debug\WpfApp.exe
 C:\Users\shant\source\repos\KABSU-Inventory-App\WpfApp\WpfApp\obj\Debug\WpfApp.pdb
+C:\Users\shant\source\repos\KABSU-Inventory-App\WpfApp\WpfApp\obj\Debug\SearchWindowResults.g.cs
+C:\Users\shant\source\repos\KABSU-Inventory-App\WpfApp\WpfApp\obj\Debug\SearchWindowResults.baml
+C:\Users\shant\source\repos\KABSU-Inventory-App\WpfApp\WpfApp\obj\Debug\RecordWindow.g.cs
+C:\Users\shant\source\repos\KABSU-Inventory-App\WpfApp\WpfApp\obj\Debug\RecordWindow.baml
