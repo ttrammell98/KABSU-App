@@ -5,15 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp"
         mc:Ignorable="d"
-        Title="RecordWindow" Height="316.4" Width="468.8">
+        Title="RecordWindow" Height="316.4" Width="703.2">
     <Grid ShowGridLines="True" Margin="0,0,0.4,1.2">
-        <Grid x:Name="uxTopGrid1" HorizontalAlignment="Left" Height="185" VerticalAlignment="Top" Width="218" Margin="10,10,0,0">
+        <Grid x:Name="uxTopGrid1" HorizontalAlignment="Left" Height="185" VerticalAlignment="Top" Width="327" Margin="10,76,0,0">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="80" />
+                <ColumnDefinition Width="120" />
+                <ColumnDefinition Width="67.5" />
                 <ColumnDefinition Width="45" />
-                <ColumnDefinition Width="30" />
-                <ColumnDefinition Width="30" />
-                <ColumnDefinition Width="33" />
+                <ColumnDefinition Width="45" />
+                <ColumnDefinition Width="49.5" />
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto" />
@@ -27,16 +27,16 @@
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="*" />
             </Grid.RowDefinitions>
-            <Label>TO OR FROM</Label>
-            <Label Grid.Column="1">DATE</Label>
-            <Label Grid.Column="2">
+            <Label Grid.Column="0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">TO OR FROM</Label>
+            <Label Grid.Column="1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">DATE</Label>
+            <Label Grid.Column="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">
                 <TextBlock>NO.<LineBreak/>REC.</TextBlock>
             </Label>
-            <Label Grid.Column="3">
+            <Label Grid.Column="3" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">
                 <TextBlock>NO.<LineBreak/>SHIP</TextBlock>
             </Label>
-            <Label Grid.Column="4">BAL.</Label>
-            <TextBox Grid.Row="2" Grid.Column="0"></TextBox>
+            <Label Grid.Column="4" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">BAL.</Label>
+            <TextBox Grid.Row="2" Grid.Column="0"/>
             <TextBox Grid.Row="3" Grid.Column="0"></TextBox>
             <TextBox Grid.Row="4" Grid.Column="0"></TextBox>
             <TextBox Grid.Row="5" Grid.Column="0"></TextBox>
@@ -81,15 +81,14 @@
             <TextBox Grid.Row="8" Grid.Column="4"></TextBox>
             <TextBox Grid.Row="9" Grid.Column="4"></TextBox>
             <TextBox Grid.Row="10" Grid.Column="4"></TextBox>
-            <Label Content="TO OR FROM"/>
         </Grid>
-        <Grid x:Name="uxTopGrid2" HorizontalAlignment="Left" Height="185" VerticalAlignment="Top" Width="218" Margin="228,10,0,0">
+        <Grid x:Name="uxTopGrid2" HorizontalAlignment="Left" Height="185" VerticalAlignment="Top" Width="327" Margin="342,76,0,0">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="80" />
+                <ColumnDefinition Width="120" />
+                <ColumnDefinition Width="67.5" />
                 <ColumnDefinition Width="45" />
-                <ColumnDefinition Width="30" />
-                <ColumnDefinition Width="30" />
-                <ColumnDefinition Width="33" />
+                <ColumnDefinition Width="45" />
+                <ColumnDefinition Width="49.5" />
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto" />
@@ -103,15 +102,15 @@
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="*" />
             </Grid.RowDefinitions>
-            <Label Content="TO OR FROM"/>
-            <Label Grid.Column="1" Content="DATE"/>
-            <Label Grid.Column="2">
+            <Label HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Content="TO OR FROM"/>
+            <Label Grid.Column="1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Content="DATE"/>
+            <Label Grid.Column="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">
                 <TextBlock><Run Text="NO."/><LineBreak/><Run Text="REC."/></TextBlock>
             </Label>
-            <Label Grid.Column="3">
+            <Label Grid.Column="3" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">
                 <TextBlock><Run Text="NO."/><LineBreak/><Run Text="SHIP"/></TextBlock>
             </Label>
-            <Label Grid.Column="4" Content="BAL."/>
+            <Label Grid.Column="4" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Content="BAL."/>
             <TextBox Grid.Row="2" Grid.Column="0"/>
             <TextBox Grid.Row="3" Grid.Column="0"/>
             <TextBox Grid.Row="4" Grid.Column="0"/>
@@ -157,32 +156,31 @@
             <TextBox Grid.Row="8" Grid.Column="4"/>
             <TextBox Grid.Row="9" Grid.Column="4"/>
             <TextBox Grid.Row="10" Grid.Column="4"/>
-            <Label Content="TO OR FROM"/>
         </Grid>
-        <Grid x:Name="uxBottomGrid" HorizontalAlignment="Left" Height="61" VerticalAlignment="Top" Width="436" Margin="10,195,0,0">
+        <Grid x:Name="uxBottomGrid" HorizontalAlignment="Left" Height="61" VerticalAlignment="Top" Width="659" Margin="10,10,0,0">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="40" />
-                <ColumnDefinition Width="40" />
-                <ColumnDefinition Width="45" />
-                <ColumnDefinition Width="115"/>
-                <ColumnDefinition Width="103"/>
-                <ColumnDefinition Width="93"/>
+                <ColumnDefinition Width="60" />
+                <ColumnDefinition Width="60" />
+                <ColumnDefinition Width="67.5" />
+                <ColumnDefinition Width="177.5"/>
+                <ColumnDefinition Width="154.5"/>
+                <ColumnDefinition Width="139.5"/>
             </Grid.ColumnDefinitions>
 
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="18" />
             </Grid.RowDefinitions>
-            <Label>
+            <Label HorizontalContentAlignment="Center" VerticalContentAlignment="Center">
                 <TextBlock><Run Text="CAN"/><LineBreak/><Run Text="NO."/></TextBlock>
             </Label>
-            <Label Grid.Column="1">
+            <Label Grid.Column="1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">
                 <TextBlock><Run Text="CODE"/><LineBreak/><Run Text="NO."/></TextBlock>
             </Label>
-            <Label Grid.Column="2" Content="BREED"/>
-            <Label Grid.Column="3" Content="NAME OF ANIMAL"/>
-            <Label Grid.Column="4" Content="REG. NO."/>
-            <Label Grid.Column="5" Content="OWNER"/>
+            <Label Grid.Column="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Content="BREED"/>
+            <Label Grid.Column="3" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Content="NAME OF ANIMAL"/>
+            <Label Grid.Column="4" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Content="REG. NO."/>
+            <Label Grid.Column="5" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Content="OWNER"/>
             <TextBox Grid.Row="2" Grid.Column="0"></TextBox>
             <TextBox Grid.Row="2" Grid.Column="1"></TextBox>
             <TextBox Grid.Row="2" Grid.Column="2"></TextBox>
