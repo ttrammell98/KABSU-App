@@ -5,9 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp"
         mc:Ignorable="d"
-        Title="RecordWindow" Height="316.4" Width="703.2">
+        Title="Record Window" Height="341.2" Width="697.6">
     <Grid ShowGridLines="True" Margin="0,0,0.4,1.2">
-        <Grid x:Name="uxTopGrid1" HorizontalAlignment="Left" Height="185" VerticalAlignment="Top" Width="327" Margin="10,76,0,0">
+        <Grid x:Name="uxTopGrid1" HorizontalAlignment="Left" Height="211" VerticalAlignment="Top" Width="327" Margin="10,81,0,0">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="120" />
                 <ColumnDefinition Width="67.5" />
@@ -16,7 +16,7 @@
                 <ColumnDefinition Width="49.5" />
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
-                <RowDefinition Height="Auto" />
+                <RowDefinition Height="45" />
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="Auto" />
@@ -27,62 +27,62 @@
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="*" />
             </Grid.RowDefinitions>
-            <Label Grid.Column="0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">TO OR FROM</Label>
-            <Label Grid.Column="1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">DATE</Label>
-            <Label Grid.Column="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">
+            <Label Grid.Column="0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="14">TO OR FROM</Label>
+            <Label Grid.Column="1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="14">DATE</Label>
+            <Label Grid.Column="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="14">
                 <TextBlock>NO.<LineBreak/>REC.</TextBlock>
             </Label>
-            <Label Grid.Column="3" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">
+            <Label Grid.Column="3" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="14">
                 <TextBlock>NO.<LineBreak/>SHIP</TextBlock>
             </Label>
-            <Label Grid.Column="4" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">BAL.</Label>
-            <TextBox Grid.Row="2" Grid.Column="0"/>
-            <TextBox Grid.Row="3" Grid.Column="0"></TextBox>
-            <TextBox Grid.Row="4" Grid.Column="0"></TextBox>
-            <TextBox Grid.Row="5" Grid.Column="0"></TextBox>
-            <TextBox Grid.Row="6" Grid.Column="0"></TextBox>
-            <TextBox Grid.Row="7" Grid.Column="0"></TextBox>
-            <TextBox Grid.Row="8" Grid.Column="0"></TextBox>
-            <TextBox Grid.Row="9" Grid.Column="0"></TextBox>
-            <TextBox Grid.Row="10" Grid.Column="0"></TextBox>
-            <TextBox Grid.Row="2" Grid.Column="1"></TextBox>
-            <TextBox Grid.Row="3" Grid.Column="1"></TextBox>
-            <TextBox Grid.Row="4" Grid.Column="1"></TextBox>
-            <TextBox Grid.Row="5" Grid.Column="1"></TextBox>
-            <TextBox Grid.Row="6" Grid.Column="1"></TextBox>
-            <TextBox Grid.Row="7" Grid.Column="1"></TextBox>
-            <TextBox Grid.Row="8" Grid.Column="1"></TextBox>
-            <TextBox Grid.Row="9" Grid.Column="1"></TextBox>
-            <TextBox Grid.Row="10" Grid.Column="1"></TextBox>
-            <TextBox Grid.Row="2" Grid.Column="2"></TextBox>
-            <TextBox Grid.Row="3" Grid.Column="2"></TextBox>
-            <TextBox Grid.Row="4" Grid.Column="2"></TextBox>
-            <TextBox Grid.Row="5" Grid.Column="2"></TextBox>
-            <TextBox Grid.Row="6" Grid.Column="2"></TextBox>
-            <TextBox Grid.Row="7" Grid.Column="2"></TextBox>
-            <TextBox Grid.Row="8" Grid.Column="2"></TextBox>
-            <TextBox Grid.Row="9" Grid.Column="2"></TextBox>
-            <TextBox Grid.Row="10" Grid.Column="2"></TextBox>
-            <TextBox Grid.Row="2" Grid.Column="3"></TextBox>
-            <TextBox Grid.Row="3" Grid.Column="3"></TextBox>
-            <TextBox Grid.Row="4" Grid.Column="3"></TextBox>
-            <TextBox Grid.Row="5" Grid.Column="3"></TextBox>
-            <TextBox Grid.Row="6" Grid.Column="3"></TextBox>
-            <TextBox Grid.Row="7" Grid.Column="3"></TextBox>
-            <TextBox Grid.Row="8" Grid.Column="3"></TextBox>
-            <TextBox Grid.Row="9" Grid.Column="3"></TextBox>
-            <TextBox Grid.Row="10" Grid.Column="3"></TextBox>
-            <TextBox Grid.Row="2" Grid.Column="4"></TextBox>
-            <TextBox Grid.Row="3" Grid.Column="4"></TextBox>
-            <TextBox Grid.Row="4" Grid.Column="4"></TextBox>
-            <TextBox Grid.Row="5" Grid.Column="4"></TextBox>
-            <TextBox Grid.Row="6" Grid.Column="4"></TextBox>
-            <TextBox Grid.Row="7" Grid.Column="4"></TextBox>
-            <TextBox Grid.Row="8" Grid.Column="4"></TextBox>
-            <TextBox Grid.Row="9" Grid.Column="4"></TextBox>
-            <TextBox Grid.Row="10" Grid.Column="4"></TextBox>
+            <Label Grid.Column="4" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="14">BAL.</Label>
+            <TextBox Grid.Row="2" Grid.Column="0" FontSize="14"/>
+            <TextBox Grid.Row="3" Grid.Column="0" FontSize="14"/>
+            <TextBox Grid.Row="4" Grid.Column="0" FontSize="14"/>
+            <TextBox Grid.Row="5" Grid.Column="0" FontSize="14"/>
+            <TextBox Grid.Row="6" Grid.Column="0" FontSize="14"/>
+            <TextBox Grid.Row="7" Grid.Column="0" FontSize="14"/>
+            <TextBox Grid.Row="8" Grid.Column="0" FontSize="14"/>
+            <TextBox Grid.Row="9" Grid.Column="0" FontSize="14"/>
+            <TextBox Grid.Row="10" Grid.Column="0" FontSize="14"/>
+            <TextBox Grid.Row="2" Grid.Column="1" FontSize="14"/>
+            <TextBox Grid.Row="3" Grid.Column="1" FontSize="14"/>
+            <TextBox Grid.Row="4" Grid.Column="1" FontSize="14"/>
+            <TextBox Grid.Row="5" Grid.Column="1" FontSize="14"/>
+            <TextBox Grid.Row="6" Grid.Column="1" FontSize="14"/>
+            <TextBox Grid.Row="7" Grid.Column="1" FontSize="14"/>
+            <TextBox Grid.Row="8" Grid.Column="1" FontSize="14"/>
+            <TextBox Grid.Row="9" Grid.Column="1" FontSize="14"/>
+            <TextBox Grid.Row="10" Grid.Column="1" FontSize="14"/>
+            <TextBox Grid.Row="2" Grid.Column="2" FontSize="14"/>
+            <TextBox Grid.Row="3" Grid.Column="2" FontSize="14"/>
+            <TextBox Grid.Row="4" Grid.Column="2" FontSize="14"/>
+            <TextBox Grid.Row="5" Grid.Column="2" FontSize="14"/>
+            <TextBox Grid.Row="6" Grid.Column="2" FontSize="14"/>
+            <TextBox Grid.Row="7" Grid.Column="2" FontSize="14"/>
+            <TextBox Grid.Row="8" Grid.Column="2" FontSize="14"/>
+            <TextBox Grid.Row="9" Grid.Column="2" FontSize="14"/>
+            <TextBox Grid.Row="10" Grid.Column="2" FontSize="14"/>
+            <TextBox Grid.Row="2" Grid.Column="3" FontSize="14"/>
+            <TextBox Grid.Row="3" Grid.Column="3" FontSize="14"/>
+            <TextBox Grid.Row="4" Grid.Column="3" FontSize="14"/>
+            <TextBox Grid.Row="5" Grid.Column="3" FontSize="14"/>
+            <TextBox Grid.Row="6" Grid.Column="3" FontSize="14"/>
+            <TextBox Grid.Row="7" Grid.Column="3" FontSize="14"/>
+            <TextBox Grid.Row="8" Grid.Column="3" FontSize="14"/>
+            <TextBox Grid.Row="9" Grid.Column="3" FontSize="14"/>
+            <TextBox Grid.Row="10" Grid.Column="3" FontSize="14"/>
+            <TextBox Grid.Row="2" Grid.Column="4" FontSize="14"/>
+            <TextBox Grid.Row="3" Grid.Column="4" FontSize="14"/>
+            <TextBox Grid.Row="4" Grid.Column="4" FontSize="14"/>
+            <TextBox Grid.Row="5" Grid.Column="4" FontSize="14"/>
+            <TextBox Grid.Row="6" Grid.Column="4" FontSize="14"/>
+            <TextBox Grid.Row="7" Grid.Column="4" FontSize="14"/>
+            <TextBox Grid.Row="8" Grid.Column="4" FontSize="14"/>
+            <TextBox Grid.Row="9" Grid.Column="4" FontSize="14"/>
+            <TextBox Grid.Row="10" Grid.Column="4" FontSize="14"/>
         </Grid>
-        <Grid x:Name="uxTopGrid2" HorizontalAlignment="Left" Height="185" VerticalAlignment="Top" Width="327" Margin="342,76,0,0">
+        <Grid x:Name="uxTopGrid2" HorizontalAlignment="Left" Height="211" VerticalAlignment="Top" Width="327" Margin="342,81,0,0">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="120" />
                 <ColumnDefinition Width="67.5" />
@@ -91,7 +91,7 @@
                 <ColumnDefinition Width="49.5" />
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
-                <RowDefinition Height="Auto" />
+                <RowDefinition Height="45" />
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="Auto" />
@@ -102,62 +102,62 @@
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="*" />
             </Grid.RowDefinitions>
-            <Label HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Content="TO OR FROM"/>
-            <Label Grid.Column="1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Content="DATE"/>
-            <Label Grid.Column="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">
-                <TextBlock><Run Text="NO."/><LineBreak/><Run Text="REC."/></TextBlock>
+            <Label Grid.Column="0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="14">TO OR FROM</Label>
+            <Label Grid.Column="1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="14">DATE</Label>
+            <Label Grid.Column="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="14">
+                <TextBlock>NO.<LineBreak/>REC.</TextBlock>
             </Label>
-            <Label Grid.Column="3" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">
-                <TextBlock><Run Text="NO."/><LineBreak/><Run Text="SHIP"/></TextBlock>
+            <Label Grid.Column="3" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="14">
+                <TextBlock>NO.<LineBreak/>SHIP</TextBlock>
             </Label>
-            <Label Grid.Column="4" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Content="BAL."/>
-            <TextBox Grid.Row="2" Grid.Column="0"/>
-            <TextBox Grid.Row="3" Grid.Column="0"/>
-            <TextBox Grid.Row="4" Grid.Column="0"/>
-            <TextBox Grid.Row="5" Grid.Column="0"/>
-            <TextBox Grid.Row="6" Grid.Column="0"/>
-            <TextBox Grid.Row="7" Grid.Column="0"/>
-            <TextBox Grid.Row="8" Grid.Column="0"/>
-            <TextBox Grid.Row="9" Grid.Column="0"/>
-            <TextBox Grid.Row="10" Grid.Column="0"/>
-            <TextBox Grid.Row="2" Grid.Column="1"/>
-            <TextBox Grid.Row="3" Grid.Column="1"/>
-            <TextBox Grid.Row="4" Grid.Column="1"/>
-            <TextBox Grid.Row="5" Grid.Column="1"/>
-            <TextBox Grid.Row="6" Grid.Column="1"/>
-            <TextBox Grid.Row="7" Grid.Column="1"/>
-            <TextBox Grid.Row="8" Grid.Column="1"/>
-            <TextBox Grid.Row="9" Grid.Column="1"/>
-            <TextBox Grid.Row="10" Grid.Column="1"/>
-            <TextBox Grid.Row="2" Grid.Column="2"/>
-            <TextBox Grid.Row="3" Grid.Column="2"/>
-            <TextBox Grid.Row="4" Grid.Column="2"/>
-            <TextBox Grid.Row="5" Grid.Column="2"/>
-            <TextBox Grid.Row="6" Grid.Column="2"/>
-            <TextBox Grid.Row="7" Grid.Column="2"/>
-            <TextBox Grid.Row="8" Grid.Column="2"/>
-            <TextBox Grid.Row="9" Grid.Column="2"/>
-            <TextBox Grid.Row="10" Grid.Column="2"/>
-            <TextBox Grid.Row="2" Grid.Column="3"/>
-            <TextBox Grid.Row="3" Grid.Column="3"/>
-            <TextBox Grid.Row="4" Grid.Column="3"/>
-            <TextBox Grid.Row="5" Grid.Column="3"/>
-            <TextBox Grid.Row="6" Grid.Column="3"/>
-            <TextBox Grid.Row="7" Grid.Column="3"/>
-            <TextBox Grid.Row="8" Grid.Column="3"/>
-            <TextBox Grid.Row="9" Grid.Column="3"/>
-            <TextBox Grid.Row="10" Grid.Column="3"/>
-            <TextBox Grid.Row="2" Grid.Column="4"/>
-            <TextBox Grid.Row="3" Grid.Column="4"/>
-            <TextBox Grid.Row="4" Grid.Column="4"/>
-            <TextBox Grid.Row="5" Grid.Column="4"/>
-            <TextBox Grid.Row="6" Grid.Column="4"/>
-            <TextBox Grid.Row="7" Grid.Column="4"/>
-            <TextBox Grid.Row="8" Grid.Column="4"/>
-            <TextBox Grid.Row="9" Grid.Column="4"/>
-            <TextBox Grid.Row="10" Grid.Column="4"/>
+            <Label Grid.Column="4" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="14">BAL.</Label>
+            <TextBox Grid.Row="2" Grid.Column="0" FontSize="14"/>
+            <TextBox Grid.Row="3" Grid.Column="0" FontSize="14"/>
+            <TextBox Grid.Row="4" Grid.Column="0" FontSize="14"/>
+            <TextBox Grid.Row="5" Grid.Column="0" FontSize="14"/>
+            <TextBox Grid.Row="6" Grid.Column="0" FontSize="14"/>
+            <TextBox Grid.Row="7" Grid.Column="0" FontSize="14"/>
+            <TextBox Grid.Row="8" Grid.Column="0" FontSize="14"/>
+            <TextBox Grid.Row="9" Grid.Column="0" FontSize="14"/>
+            <TextBox Grid.Row="10" Grid.Column="0" FontSize="14"/>
+            <TextBox Grid.Row="2" Grid.Column="1" FontSize="14"/>
+            <TextBox Grid.Row="3" Grid.Column="1" FontSize="14"/>
+            <TextBox Grid.Row="4" Grid.Column="1" FontSize="14"/>
+            <TextBox Grid.Row="5" Grid.Column="1" FontSize="14"/>
+            <TextBox Grid.Row="6" Grid.Column="1" FontSize="14"/>
+            <TextBox Grid.Row="7" Grid.Column="1" FontSize="14"/>
+            <TextBox Grid.Row="8" Grid.Column="1" FontSize="14"/>
+            <TextBox Grid.Row="9" Grid.Column="1" FontSize="14"/>
+            <TextBox Grid.Row="10" Grid.Column="1" FontSize="14"/>
+            <TextBox Grid.Row="2" Grid.Column="2" FontSize="14"/>
+            <TextBox Grid.Row="3" Grid.Column="2" FontSize="14"/>
+            <TextBox Grid.Row="4" Grid.Column="2" FontSize="14"/>
+            <TextBox Grid.Row="5" Grid.Column="2" FontSize="14"/>
+            <TextBox Grid.Row="6" Grid.Column="2" FontSize="14"/>
+            <TextBox Grid.Row="7" Grid.Column="2" FontSize="14"/>
+            <TextBox Grid.Row="8" Grid.Column="2" FontSize="14"/>
+            <TextBox Grid.Row="9" Grid.Column="2" FontSize="14"/>
+            <TextBox Grid.Row="10" Grid.Column="2" FontSize="14"/>
+            <TextBox Grid.Row="2" Grid.Column="3" FontSize="14"/>
+            <TextBox Grid.Row="3" Grid.Column="3" FontSize="14"/>
+            <TextBox Grid.Row="4" Grid.Column="3" FontSize="14"/>
+            <TextBox Grid.Row="5" Grid.Column="3" FontSize="14"/>
+            <TextBox Grid.Row="6" Grid.Column="3" FontSize="14"/>
+            <TextBox Grid.Row="7" Grid.Column="3" FontSize="14"/>
+            <TextBox Grid.Row="8" Grid.Column="3" FontSize="14"/>
+            <TextBox Grid.Row="9" Grid.Column="3" FontSize="14"/>
+            <TextBox Grid.Row="10" Grid.Column="3" FontSize="14"/>
+            <TextBox Grid.Row="2" Grid.Column="4" FontSize="14"/>
+            <TextBox Grid.Row="3" Grid.Column="4" FontSize="14"/>
+            <TextBox Grid.Row="4" Grid.Column="4" FontSize="14"/>
+            <TextBox Grid.Row="5" Grid.Column="4" FontSize="14"/>
+            <TextBox Grid.Row="6" Grid.Column="4" FontSize="14"/>
+            <TextBox Grid.Row="7" Grid.Column="4" FontSize="14"/>
+            <TextBox Grid.Row="8" Grid.Column="4" FontSize="14"/>
+            <TextBox Grid.Row="9" Grid.Column="4" FontSize="14"/>
+            <TextBox Grid.Row="10" Grid.Column="4" FontSize="14"/>
         </Grid>
-        <Grid x:Name="uxBottomGrid" HorizontalAlignment="Left" Height="61" VerticalAlignment="Top" Width="659" Margin="10,10,0,0">
+        <Grid x:Name="uxBottomGrid" HorizontalAlignment="Left" Height="67" VerticalAlignment="Top" Width="659" Margin="10,10,0,0">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="60" />
                 <ColumnDefinition Width="60" />
@@ -168,25 +168,25 @@
             </Grid.ColumnDefinitions>
 
             <Grid.RowDefinitions>
-                <RowDefinition Height="Auto" />
-                <RowDefinition Height="18" />
+                <RowDefinition Height="45" />
+                <RowDefinition Height="21" />
             </Grid.RowDefinitions>
-            <Label HorizontalContentAlignment="Center" VerticalContentAlignment="Center">
+            <Label HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="14">
                 <TextBlock><Run Text="CAN"/><LineBreak/><Run Text="NO."/></TextBlock>
             </Label>
-            <Label Grid.Column="1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">
+            <Label Grid.Column="1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="14">
                 <TextBlock><Run Text="CODE"/><LineBreak/><Run Text="NO."/></TextBlock>
             </Label>
-            <Label Grid.Column="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Content="BREED"/>
-            <Label Grid.Column="3" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Content="NAME OF ANIMAL"/>
-            <Label Grid.Column="4" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Content="REG. NO."/>
-            <Label Grid.Column="5" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Content="OWNER"/>
-            <TextBox Grid.Row="2" Grid.Column="0"></TextBox>
-            <TextBox Grid.Row="2" Grid.Column="1"></TextBox>
-            <TextBox Grid.Row="2" Grid.Column="2"></TextBox>
-            <TextBox Grid.Row="2" Grid.Column="3"></TextBox>
-            <TextBox Grid.Row="2" Grid.Column="4"></TextBox>
-            <TextBox Grid.Row="2" Grid.Column="5"></TextBox>
+            <Label Grid.Column="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Content="BREED" FontSize="14"/>
+            <Label Grid.Column="3" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Content="NAME OF ANIMAL" FontSize="14"/>
+            <Label Grid.Column="4" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Content="REG. NO." FontSize="14"/>
+            <Label Grid.Column="5" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Content="OWNER" FontSize="14"/>
+            <TextBox Grid.Row="2" Grid.Column="0" FontSize="14"/>
+            <TextBox Grid.Row="2" Grid.Column="1" FontSize="14"/>
+            <TextBox Grid.Row="2" Grid.Column="2" FontSize="14"/>
+            <TextBox Grid.Row="2" Grid.Column="3" FontSize="14"/>
+            <TextBox Grid.Row="2" Grid.Column="4" FontSize="14"/>
+            <TextBox Grid.Row="2" Grid.Column="5" FontSize="14"/>
         </Grid>
     </Grid>
 </Window>

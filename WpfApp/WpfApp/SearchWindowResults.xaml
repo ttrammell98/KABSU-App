@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp"
         mc:Ignorable="d"
-        Title="SearchWindowResults" Height="450" Width="800" ResizeMode="CanMinimize">
+        Title="Search Results" Height="450" Width="800" ResizeMode="CanMinimize">
     <Grid>
         <DataGrid x:Name="dataGrid" HorizontalAlignment="Left" Height="392" VerticalAlignment="Top" Width="764" Margin="10,10,0,0"/>
 
