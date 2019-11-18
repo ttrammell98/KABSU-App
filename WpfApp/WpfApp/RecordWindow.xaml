@@ -5,15 +5,144 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp"
         mc:Ignorable="d"
-        Title="Record Window" Height="341.2" Width="697.6">
+        Title="Record Window" Height="1030" Width="1900" WindowState="Maximized">
     <Grid ShowGridLines="True" Margin="0,0,0.4,1.2">
-        <Grid x:Name="uxTopGrid1" HorizontalAlignment="Left" Height="211" VerticalAlignment="Top" Width="327" Margin="10,81,0,0">
+        <Grid x:Name="uxTopGrid1" HorizontalAlignment="Left" Height="633" VerticalAlignment="Top" Width="751" Margin="10,81,0,0">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="120" />
-                <ColumnDefinition Width="67.5" />
-                <ColumnDefinition Width="45" />
-                <ColumnDefinition Width="45" />
-                <ColumnDefinition Width="49.5" />
+                <ColumnDefinition Width="276" />
+                <ColumnDefinition Width="155.25" />
+                <ColumnDefinition Width="105" />
+                <ColumnDefinition Width="105" />
+                <ColumnDefinition Width="109.4" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="45" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Label Grid.Column="0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="14">TO OR FROM</Label>
+            <Label Grid.Column="1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="14">DATE</Label>
+            <Label Grid.Column="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="14">
+                <TextBlock>NO.<LineBreak/>REC.</TextBlock>
+            </Label>
+            <Label Grid.Column="3" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="14">
+                <TextBlock>NO.<LineBreak/>SHIP</TextBlock>
+            </Label>
+            <Label Grid.Column="4" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="14">BAL.</Label>
+            <TextBox Grid.Row="2" Grid.Column="0" FontSize="14"/>
+            <TextBox Grid.Row="3" Grid.Column="0" FontSize="14"/>
+            <TextBox Grid.Row="4" Grid.Column="0" FontSize="14"/>
+            <TextBox Grid.Row="5" Grid.Column="0" FontSize="14"/>
+            <TextBox Grid.Row="6" Grid.Column="0" FontSize="14"/>
+            <TextBox Grid.Row="7" Grid.Column="0" FontSize="14"/>
+            <TextBox Grid.Row="8" Grid.Column="0" FontSize="14"/>
+            <TextBox Grid.Row="9" Grid.Column="0" FontSize="14"/>
+            <TextBox Grid.Row="10" Grid.Column="0" FontSize="14"/>
+            <TextBox Grid.Row="11" Grid.Column="0" FontSize="14"/>
+            <TextBox Grid.Row="12" Grid.Column="0" FontSize="14"/>
+            <TextBox Grid.Row="13" Grid.Column="0" FontSize="14"/>
+            <TextBox Grid.Row="14" Grid.Column="0" FontSize="14"/>
+            <TextBox Grid.Row="15" Grid.Column="0" FontSize="14"/>
+            <TextBox Grid.Row="16" Grid.Column="0" FontSize="14"/>
+            <TextBox Grid.Row="17" Grid.Column="0" FontSize="14"/>
+            <TextBox Grid.Row="18" Grid.Column="0" FontSize="14"/>
+            <TextBox Grid.Row="19" Grid.Column="0" FontSize="14"/>
+            <TextBox Grid.Row="20" Grid.Column="0" FontSize="14"/>
+            <TextBox Grid.Row="21" Grid.Column="0" FontSize="14"/>
+            <TextBox Grid.Row="22" Grid.Column="0" FontSize="14"/>
+            <TextBox Grid.Row="23" Grid.Column="0" FontSize="14"/>
+            <TextBox Grid.Row="24" Grid.Column="0" FontSize="14"/>
+            <TextBox Grid.Row="25" Grid.Column="0" FontSize="14"/>
+            <TextBox Grid.Row="26" Grid.Column="0" FontSize="14"/>
+            <TextBox Grid.Row="27" Grid.Column="0" FontSize="14"/>
+            <TextBox Grid.Row="28" Grid.Column="0" FontSize="14"/>
+            <TextBox Grid.Row="2" Grid.Column="1" FontSize="14"/>
+            <TextBox Grid.Row="3" Grid.Column="1" FontSize="14"/>
+            <TextBox Grid.Row="4" Grid.Column="1" FontSize="14"/>
+            <TextBox Grid.Row="5" Grid.Column="1" FontSize="14"/>
+            <TextBox Grid.Row="6" Grid.Column="1" FontSize="14"/>
+            <TextBox Grid.Row="7" Grid.Column="1" FontSize="14"/>
+            <TextBox Grid.Row="8" Grid.Column="1" FontSize="14"/>
+            <TextBox Grid.Row="9" Grid.Column="1" FontSize="14"/>
+            <TextBox Grid.Row="10" Grid.Column="1" FontSize="14"/>
+            <TextBox Grid.Row="11" Grid.Column="1" FontSize="14"/>
+            <TextBox Grid.Row="12" Grid.Column="1" FontSize="14"/>
+            <TextBox Grid.Row="13" Grid.Column="1" FontSize="14"/>
+            <TextBox Grid.Row="14" Grid.Column="1" FontSize="14"/>
+            <TextBox Grid.Row="15" Grid.Column="1" FontSize="14"/>
+            <TextBox Grid.Row="16" Grid.Column="1" FontSize="14"/>
+            <TextBox Grid.Row="17" Grid.Column="1" FontSize="14"/>
+            <TextBox Grid.Row="18" Grid.Column="1" FontSize="14"/>
+            <TextBox Grid.Row="19" Grid.Column="1" FontSize="14"/>
+            <TextBox Grid.Row="20" Grid.Column="1" FontSize="14"/>
+            <TextBox Grid.Row="21" Grid.Column="1" FontSize="14"/>
+            <TextBox Grid.Row="22" Grid.Column="1" FontSize="14"/>
+            <TextBox Grid.Row="23" Grid.Column="1" FontSize="14"/>
+            <TextBox Grid.Row="24" Grid.Column="1" FontSize="14"/>
+            <TextBox Grid.Row="25" Grid.Column="1" FontSize="14"/>
+            <TextBox Grid.Row="26" Grid.Column="1" FontSize="14"/>
+            <TextBox Grid.Row="27" Grid.Column="1" FontSize="14"/>
+            <TextBox Grid.Row="28" Grid.Column="0" FontSize="14"/>
+            <TextBox Grid.Row="2" Grid.Column="2" FontSize="14"/>
+            <TextBox Grid.Row="3" Grid.Column="2" FontSize="14"/>
+            <TextBox Grid.Row="4" Grid.Column="2" FontSize="14"/>
+            <TextBox Grid.Row="5" Grid.Column="2" FontSize="14"/>
+            <TextBox Grid.Row="6" Grid.Column="2" FontSize="14"/>
+            <TextBox Grid.Row="7" Grid.Column="2" FontSize="14"/>
+            <TextBox Grid.Row="8" Grid.Column="2" FontSize="14"/>
+            <TextBox Grid.Row="9" Grid.Column="2" FontSize="14"/>
+            <TextBox Grid.Row="10" Grid.Column="2" FontSize="14"/>
+            <TextBox Grid.Row="2" Grid.Column="3" FontSize="14"/>
+            <TextBox Grid.Row="3" Grid.Column="3" FontSize="14"/>
+            <TextBox Grid.Row="4" Grid.Column="3" FontSize="14"/>
+            <TextBox Grid.Row="5" Grid.Column="3" FontSize="14"/>
+            <TextBox Grid.Row="6" Grid.Column="3" FontSize="14"/>
+            <TextBox Grid.Row="7" Grid.Column="3" FontSize="14"/>
+            <TextBox Grid.Row="8" Grid.Column="3" FontSize="14"/>
+            <TextBox Grid.Row="9" Grid.Column="3" FontSize="14"/>
+            <TextBox Grid.Row="10" Grid.Column="3" FontSize="14"/>
+            <TextBox Grid.Row="2" Grid.Column="4" FontSize="14"/>
+            <TextBox Grid.Row="3" Grid.Column="4" FontSize="14"/>
+            <TextBox Grid.Row="4" Grid.Column="4" FontSize="14"/>
+            <TextBox Grid.Row="5" Grid.Column="4" FontSize="14"/>
+            <TextBox Grid.Row="6" Grid.Column="4" FontSize="14"/>
+            <TextBox Grid.Row="7" Grid.Column="4" FontSize="14"/>
+            <TextBox Grid.Row="8" Grid.Column="4" FontSize="14"/>
+            <TextBox Grid.Row="9" Grid.Column="4" FontSize="14"/>
+            <TextBox Grid.Row="10" Grid.Column="4" FontSize="14"/>
+        </Grid>
+        <Grid x:Name="uxTopGrid2" HorizontalAlignment="Left" Height="633" VerticalAlignment="Top" Width="751" Margin="774,82,0,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="276" />
+                <ColumnDefinition Width="155.25" />
+                <ColumnDefinition Width="105" />
+                <ColumnDefinition Width="105" />
+                <ColumnDefinition Width="109.4" />
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
                 <RowDefinition Height="45" />
@@ -82,89 +211,14 @@
             <TextBox Grid.Row="9" Grid.Column="4" FontSize="14"/>
             <TextBox Grid.Row="10" Grid.Column="4" FontSize="14"/>
         </Grid>
-        <Grid x:Name="uxTopGrid2" HorizontalAlignment="Left" Height="211" VerticalAlignment="Top" Width="327" Margin="342,81,0,0">
+        <Grid x:Name="uxBottomGrid" HorizontalAlignment="Left" Height="67" VerticalAlignment="Top" Width="1517" Margin="10,10,0,0">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="120" />
-                <ColumnDefinition Width="67.5" />
-                <ColumnDefinition Width="45" />
-                <ColumnDefinition Width="45" />
-                <ColumnDefinition Width="49.5" />
-            </Grid.ColumnDefinitions>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="45" />
-                <RowDefinition Height="Auto" />
-                <RowDefinition Height="Auto" />
-                <RowDefinition Height="Auto" />
-                <RowDefinition Height="Auto" />
-                <RowDefinition Height="Auto" />
-                <RowDefinition Height="Auto" />
-                <RowDefinition Height="Auto" />
-                <RowDefinition Height="Auto" />
-                <RowDefinition Height="*" />
-            </Grid.RowDefinitions>
-            <Label Grid.Column="0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="14">TO OR FROM</Label>
-            <Label Grid.Column="1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="14">DATE</Label>
-            <Label Grid.Column="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="14">
-                <TextBlock>NO.<LineBreak/>REC.</TextBlock>
-            </Label>
-            <Label Grid.Column="3" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="14">
-                <TextBlock>NO.<LineBreak/>SHIP</TextBlock>
-            </Label>
-            <Label Grid.Column="4" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="14">BAL.</Label>
-            <TextBox Grid.Row="2" Grid.Column="0" FontSize="14"/>
-            <TextBox Grid.Row="3" Grid.Column="0" FontSize="14"/>
-            <TextBox Grid.Row="4" Grid.Column="0" FontSize="14"/>
-            <TextBox Grid.Row="5" Grid.Column="0" FontSize="14"/>
-            <TextBox Grid.Row="6" Grid.Column="0" FontSize="14"/>
-            <TextBox Grid.Row="7" Grid.Column="0" FontSize="14"/>
-            <TextBox Grid.Row="8" Grid.Column="0" FontSize="14"/>
-            <TextBox Grid.Row="9" Grid.Column="0" FontSize="14"/>
-            <TextBox Grid.Row="10" Grid.Column="0" FontSize="14"/>
-            <TextBox Grid.Row="2" Grid.Column="1" FontSize="14"/>
-            <TextBox Grid.Row="3" Grid.Column="1" FontSize="14"/>
-            <TextBox Grid.Row="4" Grid.Column="1" FontSize="14"/>
-            <TextBox Grid.Row="5" Grid.Column="1" FontSize="14"/>
-            <TextBox Grid.Row="6" Grid.Column="1" FontSize="14"/>
-            <TextBox Grid.Row="7" Grid.Column="1" FontSize="14"/>
-            <TextBox Grid.Row="8" Grid.Column="1" FontSize="14"/>
-            <TextBox Grid.Row="9" Grid.Column="1" FontSize="14"/>
-            <TextBox Grid.Row="10" Grid.Column="1" FontSize="14"/>
-            <TextBox Grid.Row="2" Grid.Column="2" FontSize="14"/>
-            <TextBox Grid.Row="3" Grid.Column="2" FontSize="14"/>
-            <TextBox Grid.Row="4" Grid.Column="2" FontSize="14"/>
-            <TextBox Grid.Row="5" Grid.Column="2" FontSize="14"/>
-            <TextBox Grid.Row="6" Grid.Column="2" FontSize="14"/>
-            <TextBox Grid.Row="7" Grid.Column="2" FontSize="14"/>
-            <TextBox Grid.Row="8" Grid.Column="2" FontSize="14"/>
-            <TextBox Grid.Row="9" Grid.Column="2" FontSize="14"/>
-            <TextBox Grid.Row="10" Grid.Column="2" FontSize="14"/>
-            <TextBox Grid.Row="2" Grid.Column="3" FontSize="14"/>
-            <TextBox Grid.Row="3" Grid.Column="3" FontSize="14"/>
-            <TextBox Grid.Row="4" Grid.Column="3" FontSize="14"/>
-            <TextBox Grid.Row="5" Grid.Column="3" FontSize="14"/>
-            <TextBox Grid.Row="6" Grid.Column="3" FontSize="14"/>
-            <TextBox Grid.Row="7" Grid.Column="3" FontSize="14"/>
-            <TextBox Grid.Row="8" Grid.Column="3" FontSize="14"/>
-            <TextBox Grid.Row="9" Grid.Column="3" FontSize="14"/>
-            <TextBox Grid.Row="10" Grid.Column="3" FontSize="14"/>
-            <TextBox Grid.Row="2" Grid.Column="4" FontSize="14"/>
-            <TextBox Grid.Row="3" Grid.Column="4" FontSize="14"/>
-            <TextBox Grid.Row="4" Grid.Column="4" FontSize="14"/>
-            <TextBox Grid.Row="5" Grid.Column="4" FontSize="14"/>
-            <TextBox Grid.Row="6" Grid.Column="4" FontSize="14"/>
-            <TextBox Grid.Row="7" Grid.Column="4" FontSize="14"/>
-            <TextBox Grid.Row="8" Grid.Column="4" FontSize="14"/>
-            <TextBox Grid.Row="9" Grid.Column="4" FontSize="14"/>
-            <TextBox Grid.Row="10" Grid.Column="4" FontSize="14"/>
-        </Grid>
-        <Grid x:Name="uxBottomGrid" HorizontalAlignment="Left" Height="67" VerticalAlignment="Top" Width="659" Margin="10,10,0,0">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="60" />
-                <ColumnDefinition Width="60" />
-                <ColumnDefinition Width="67.5" />
-                <ColumnDefinition Width="177.5"/>
-                <ColumnDefinition Width="154.5"/>
-                <ColumnDefinition Width="139.5"/>
+                <ColumnDefinition Width="138" />
+                <ColumnDefinition Width="138" />
+                <ColumnDefinition Width="155.25" />
+                <ColumnDefinition Width="408.25"/>
+                <ColumnDefinition Width="355.35"/>
+                <ColumnDefinition Width="320.85"/>
             </Grid.ColumnDefinitions>
 
             <Grid.RowDefinitions>
