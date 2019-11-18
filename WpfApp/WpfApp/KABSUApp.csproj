@@ -64,6 +64,7 @@
     <Compile Include="SearchWindowResults.xaml.cs">
       <DependentUpon>SearchWindowResults.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Sql.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
