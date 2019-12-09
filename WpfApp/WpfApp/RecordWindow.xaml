@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp"
         mc:Ignorable="d"
-        Title="Record Window" Height="1030" Width="1900">
+        Title="Record Window" Height="827.6" Width="1549.6">
     <Grid ShowGridLines="True" Margin="0,0,0.4,1.2">
         <Grid x:Name="uxTopGrid1" HorizontalAlignment="Left" Height="703" VerticalAlignment="Top" Width="751" Margin="10,81,0,0">
             <Grid.ColumnDefinitions>
