@@ -1,6 +1,6 @@
 
 -- procudere to query informaion based on condistions from spcified in front end
-CREATE OR ALTER PROCEDURE kabsu.RetriveData
+CREATE OR ALTER PROCEDURE kabsu.RetrieveData
 @Owner NVARCHAR(128),
 @Breed NVARCHAR(128),
 @AnimalName NVARCHAR(128),
@@ -9,10 +9,10 @@ CREATE OR ALTER PROCEDURE kabsu.RetriveData
 @Town NVARCHAR(128),
 @State NVARCHAR(128),
 
+
 AS
 
-
-SELECT S.Valid, S.CanNum, A.AnimalID, A.CollDate, S.NumUnites, A.Name, A.Breed, A.RegNum, P.Name, P.Town, P.State
+SELECT S.Valid, S.CanNum, A.AnimalID, A.CollDate, S.NumUnits, A.Name AS AnimalName, A.Breed, A.RegNum, P.Name AS PersonName, P.Town, P.State
 FROM Sample S 
 INNER JOIN Person P ON P.PersonID = S.PersonID
 INNER JOIN Animal A ON A.AnimalID = A.AnimalID
