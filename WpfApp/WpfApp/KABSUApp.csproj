@@ -79,6 +79,8 @@
     <Compile Include="RecordWindow.xaml.cs">
       <DependentUpon>RecordWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="SearchResult.cs" />
+    <Compile Include="SearchResults.cs" />
     <Compile Include="SearchWindow.xaml.cs">
       <DependentUpon>SearchWindow.xaml</DependentUpon>
     </Compile>

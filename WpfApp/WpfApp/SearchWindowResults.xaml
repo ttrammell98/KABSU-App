@@ -5,11 +5,21 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp"
         mc:Ignorable="d"
-        Title="Search Results" Height="450" Width="800" ResizeMode="CanMinimize">
+        Title="Search Results" Height="473.2" Width="830.4" ResizeMode="CanMinimize">
     <Grid>
-        <DataGrid x:Name="dataGrid" HorizontalAlignment="Left" Height="392" VerticalAlignment="Top" Width="764" Margin="10,10,0,0">
+        <DataGrid x:Name="dataGrid" HorizontalAlignment="Left" Height="416" VerticalAlignment="Top" Width="794" Margin="10,10,0,0">
             <DataGrid.Columns>
-                <DataGridTextColumn x:Name="Owner"/>
+                <DataGridTextColumn x:Name="INV" Header ="INV"/>
+                <DataGridTextColumn x:Name="CanNum" Header ="Can #"/>
+                <DataGridTextColumn x:Name="Code" Header ="Code"/>
+                <DataGridTextColumn x:Name="CollDate" Header ="Collection Date"/>
+                <DataGridTextColumn x:Name="Units" Header ="Units"/>
+                <DataGridTextColumn x:Name="AnimalName" Header ="Animal Name"/>
+                <DataGridTextColumn x:Name="Breed" Header ="Breed"/>
+                <DataGridTextColumn x:Name="RegNum" Header ="Reg #"/>
+                <DataGridTextColumn x:Name="Owner" Header ="Owner"/>
+                <DataGridTextColumn x:Name="Town" Header ="Town"/>
+                <DataGridTextColumn x:Name="ST" Header ="ST"/>
             </DataGrid.Columns>
         </DataGrid>
 

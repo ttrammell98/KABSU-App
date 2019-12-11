@@ -37,6 +37,7 @@ namespace WpfApp
             termType2 = type2;
             termType3 = type3;
             termType4 = type4;
+
             InitializeComponent();
         }
 
