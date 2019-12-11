@@ -32,7 +32,7 @@ namespace WpfApp
 
         private void UxSearch_Click(object sender, RoutedEventArgs e)
         {
-            windowResults = new SearchWindowResults();
+            windowResults = new SearchWindowResults(uxSearchContents1.Text, uxSearchContents2.Text, uxSearchContents3.Text, uxSearchContents4.Text, uxSearchTerm1.Text, uxSearchTerm2.Text, uxSearchTerm3.Text, uxSearchTerm4.Text);
             windowResults.Show();
             this.Close();
         }

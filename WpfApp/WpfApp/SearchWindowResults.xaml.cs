@@ -19,9 +19,26 @@ namespace WpfApp
     /// </summary>
     public partial class SearchWindowResults : Window
     {
-        public SearchWindowResults()
+        String term1;
+        String term2;
+        String term3;
+        String term4;
+        String termType1;
+        String termType2;
+        String termType3;
+        String termType4;
+        public SearchWindowResults(String term1, String term2, String term3, String term4, String type1, String type2, String type3, String type4)
         {
+            this.term1 = term1;
+            this.term2 = term2;
+            this.term3 = term3;
+            this.term4 = term4;
+            termType1 = type1;
+            termType2 = type2;
+            termType3 = type3;
+            termType4 = type4;
             InitializeComponent();
         }
+
     }
 }

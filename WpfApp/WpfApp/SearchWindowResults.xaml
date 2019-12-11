@@ -7,7 +7,11 @@
         mc:Ignorable="d"
         Title="Search Results" Height="450" Width="800" ResizeMode="CanMinimize">
     <Grid>
-        <DataGrid x:Name="dataGrid" HorizontalAlignment="Left" Height="392" VerticalAlignment="Top" Width="764" Margin="10,10,0,0"/>
+        <DataGrid x:Name="dataGrid" HorizontalAlignment="Left" Height="392" VerticalAlignment="Top" Width="764" Margin="10,10,0,0">
+            <DataGrid.Columns>
+                <DataGridTextColumn x:Name="Owner"/>
+            </DataGrid.Columns>
+        </DataGrid>
 
     </Grid>
 </Window>

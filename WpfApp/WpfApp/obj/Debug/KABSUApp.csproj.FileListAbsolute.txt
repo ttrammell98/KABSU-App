@@ -76,3 +76,15 @@ C:\Users\e10d1\Source\Repos\KABSU-Inventory-App\WpfApp\WpfApp\obj\Debug\WpfApp.g
 C:\Users\e10d1\Source\Repos\KABSU-Inventory-App\WpfApp\WpfApp\obj\Debug\WpfApp.Properties.Resources.resources
 C:\Users\e10d1\Source\Repos\KABSU-Inventory-App\WpfApp\WpfApp\obj\Debug\KABSUApp.csproj.GenerateResource.cache
 C:\Users\e10d1\Source\Repos\KABSU-Inventory-App\WpfApp\WpfApp\obj\Debug\KABSUApp.csproj.CoreCompileInputs.cache
+C:\Users\shant\source\repos\KABSU-Inventory-App\WpfApp\WpfApp\bin\Debug\xunit.abstractions.dll
+C:\Users\shant\source\repos\KABSU-Inventory-App\WpfApp\WpfApp\bin\Debug\xunit.runner.visualstudio.testadapter.dll
+C:\Users\shant\source\repos\KABSU-Inventory-App\WpfApp\WpfApp\bin\Debug\xunit.runner.reporters.net452.dll
+C:\Users\shant\source\repos\KABSU-Inventory-App\WpfApp\WpfApp\bin\Debug\xunit.runner.utility.net452.dll
+C:\Users\shant\source\repos\KABSU-Inventory-App\WpfApp\WpfApp\bin\Debug\Microsoft.VisualStudio.CodeCoverage.Shim.dll
+C:\Users\shant\source\repos\KABSU-Inventory-App\WpfApp\WpfApp\bin\Debug\xunit.assert.dll
+C:\Users\shant\source\repos\KABSU-Inventory-App\WpfApp\WpfApp\bin\Debug\xunit.core.dll
+C:\Users\shant\source\repos\KABSU-Inventory-App\WpfApp\WpfApp\bin\Debug\xunit.execution.desktop.dll
+C:\Users\shant\source\repos\KABSU-Inventory-App\WpfApp\WpfApp\bin\Debug\xunit.assert.xml
+C:\Users\shant\source\repos\KABSU-Inventory-App\WpfApp\WpfApp\bin\Debug\xunit.core.xml
+C:\Users\shant\source\repos\KABSU-Inventory-App\WpfApp\WpfApp\bin\Debug\xunit.execution.desktop.xml
+C:\Users\shant\source\repos\KABSU-Inventory-App\WpfApp\WpfApp\obj\Debug\KABSUApp.csproj.CopyComplete
