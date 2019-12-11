@@ -20,16 +20,13 @@ FOREIGN KEY (PersonID) REFERENCES kabsu.person (PersonID)
 );
 
 CREATE TABLE Sample (
-SampleID INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+Valid BOOL NOT NULL,
 CanNum VARCHAR(8) NOT NULL,
+AnimalID VARCHAR(32) NOT NULL,
 CollDate VARCHAR(32),
 NumUnits INT NOT NULL,
-AnimalID VARCHAR(32) NOT NULL,
 PersonID INT NOT NULL,
-Valid BOOL NOT NULL,
-Notes VARCHAR(1000),
-FOREIGN KEY (PersonID) REFERENCES kabsu.person (PersonID),
-FOREIGN KEY (AnimalID) REFERENCES kabsu.animal (AnimalID)
+Notes VARCHAR(1000)
 );
 
 INSERT INTO Person (Name, City, State, Country)

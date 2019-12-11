@@ -24,12 +24,14 @@ namespace WpfApp
         {
             InitializeComponent();
         }
-
+         
+        
         private void UxSearchTerm1_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
         }
 
+        // Upon clicking "Search," opens a search results window and closes this window
         private void UxSearch_Click(object sender, RoutedEventArgs e)
         {
             windowResults = new SearchWindowResults(uxSearchContents1.Text, uxSearchContents2.Text, uxSearchContents3.Text, uxSearchContents4.Text, uxSearchTerm1.Text, uxSearchTerm2.Text, uxSearchTerm3.Text, uxSearchTerm4.Text);

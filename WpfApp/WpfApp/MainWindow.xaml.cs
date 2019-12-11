@@ -27,6 +27,11 @@ namespace WpfApp
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Upon clicking "Add New Record," opens a Record Window and closes the Main Window 
+        /// </summary>
+        /// <param name="sender">object containing sender information</param>
+        /// <param name="e">EventArgs associated with button click</param>
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             recordWindow = new RecordWindow();
@@ -34,6 +39,11 @@ namespace WpfApp
             this.Close();
         }
 
+        /// <summary>
+        /// Upon clicking "Modify Existing Record," opens a Search Window and closes the Main Window
+        /// </summary>
+        /// <param name="sender">object containing sender information</param>
+        /// <param name="e">EventArgs associated with button click</param>
         private void UxModifyRecord_Click(object sender, RoutedEventArgs e)
         {
             searchWindow = new SearchWindow();
