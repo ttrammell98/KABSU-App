@@ -88,3 +88,10 @@ C:\Users\shant\source\repos\KABSU-Inventory-App\WpfApp\WpfApp\bin\Debug\xunit.as
 C:\Users\shant\source\repos\KABSU-Inventory-App\WpfApp\WpfApp\bin\Debug\xunit.core.xml
 C:\Users\shant\source\repos\KABSU-Inventory-App\WpfApp\WpfApp\bin\Debug\xunit.execution.desktop.xml
 C:\Users\shant\source\repos\KABSU-Inventory-App\WpfApp\WpfApp\obj\Debug\KABSUApp.csproj.CopyComplete
+C:\Users\shant\source\repos\KABSU-Inventory-App\WpfApp\WpfApp\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\shant\source\repos\KABSU-Inventory-App\WpfApp\WpfApp\bin\Debug\Google.Protobuf.dll
+C:\Users\shant\source\repos\KABSU-Inventory-App\WpfApp\WpfApp\bin\Debug\MySql.Data.dll
+C:\Users\shant\source\repos\KABSU-Inventory-App\WpfApp\WpfApp\bin\Debug\Renci.SshNet.dll
+C:\Users\shant\source\repos\KABSU-Inventory-App\WpfApp\WpfApp\bin\Debug\Google.Protobuf.xml
+C:\Users\shant\source\repos\KABSU-Inventory-App\WpfApp\WpfApp\bin\Debug\MySql.Data.xml
+C:\Users\shant\source\repos\KABSU-Inventory-App\WpfApp\WpfApp\bin\Debug\Renci.SshNet.xml

@@ -6,18 +6,31 @@ using System.Threading.Tasks;
 
 namespace WpfApp
 {
+    /*<DataGrid.Columns>
+                <DataGridTextColumn x:Name="INV" Header ="INV" Binding="{Binding Path=INV,Mode=Default}"/>
+                <DataGridTextColumn x:Name="CanNum" Header ="Can #"/>
+                <DataGridTextColumn x:Name="Code" Header ="Code"/>
+                <DataGridTextColumn x:Name="CollDate" Header ="Collection Date"/>
+                <DataGridTextColumn x:Name="Units" Header ="Units"/>
+                <DataGridTextColumn x:Name="AnimalName" Header ="Animal Name"/>
+                <DataGridTextColumn x:Name="Breed" Header ="Breed"/>
+                <DataGridTextColumn x:Name="RegNum" Header ="Reg #"/>
+                <DataGridTextColumn x:Name="Owner" Header ="Owner"/>
+                <DataGridTextColumn x:Name="Town" Header ="Town"/>
+                <DataGridTextColumn x:Name="ST" Header ="ST"/>
+            </DataGrid.Columns>*/
     public class SearchResult
     {
-        private string valid;
-        public string Valid
+        private string inv;
+        public string INV
         {
             get
             {
-                return this.valid;
+                return this.inv;
             }
             set
             {
-                this.valid = value;
+                this.inv = value;
             }
         }
         private string canNum;
@@ -142,7 +155,7 @@ namespace WpfApp
         }
         public SearchResult(string valid, string canNum, string code, string collDate, string units, string animalName, string breed, string regNum, string owner, string town, string state)
         {
-            this.Valid = valid;
+            this.INV = valid;
             this.CanNum = canNum;
             this.Code = code;
             this.CollDate = collDate;

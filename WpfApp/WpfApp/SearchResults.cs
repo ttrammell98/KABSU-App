@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
@@ -11,25 +12,25 @@ namespace WpfApp
 {
     public class SearchResults
     {
-        public List<SearchResult> retrieveData(string owner, string breed, string animalName, string code, string canNum, string town, string state)
+        public List<SearchResult> retrieveData(SearchTerm st)
         {
-            string connectionString = "tcp:localhost; Integrated Security=true";
+            string connectionString = "Server=localhost;Database=kabsu; User ID = appuser; Password = test; Integrated Security=true";
             try
             {
-                using (var connection = new SqlConnection(connectionString))
+                using (var connection = new MySqlConnection(connectionString))
                 {
-                    using (var command = new SqlCommand("kabsu.RetrieveData", connection))
+                    using (var command = new MySqlCommand("kabsu.RetrieveData", connection))
                     {
                         command.CommandType = CommandType.StoredProcedure;
+                    
 
-
-                        command.Parameters.AddWithValue("Owner", owner);
-                        command.Parameters.AddWithValue("Breed", breed);
-                        command.Parameters.AddWithValue("AnimalName", animalName);
-                        command.Parameters.AddWithValue("Code", code);
-                        command.Parameters.AddWithValue("CanNum", canNum);
-                        command.Parameters.AddWithValue("Town", town);
-                        command.Parameters.AddWithValue("State", state);
+                        command.Parameters.AddWithValue("@Owner", st.Owner);
+                        command.Parameters.AddWithValue("@Breed", st.Breed);
+                        command.Parameters.AddWithValue("@AnimalName", st.AnimalName);
+                        command.Parameters.AddWithValue("@Code", st.Code);
+                        command.Parameters.AddWithValue("@CanNum", st.CanNum);
+                        command.Parameters.AddWithValue("@Town", st.Town);
+                        command.Parameters.AddWithValue("@State", st.State);
                         connection.Open();
 
                         var reader = command.ExecuteReader();
@@ -48,7 +49,7 @@ namespace WpfApp
                                reader.GetString(reader.GetOrdinal("Breed")),
                                reader.GetString(reader.GetOrdinal("RegNum")),
                                reader.GetString(reader.GetOrdinal("PersonName")),
-                               reader.GetString(reader.GetOrdinal("Town")),
+                               reader.GetString(reader.GetOrdinal("City")),
                                reader.GetString(reader.GetOrdinal("State"))));
                         }
 

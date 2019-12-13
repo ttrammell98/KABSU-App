@@ -19,26 +19,55 @@ namespace WpfApp
     /// </summary>
     public partial class SearchWindowResults : Window
     {
-        String term1;
-        String term2;
-        String term3;
-        String term4;
-        String termType1;
-        String termType2;
-        String termType3;
-        String termType4;
+        private string owner = "*";
+        private string breed = "*";
+        private string animalName = "*";
+        private string code = "*";
+        private string canNum = "*";
+        private string town = "*";
+        private string state = "*";
         public SearchWindowResults(String term1, String term2, String term3, String term4, String type1, String type2, String type3, String type4)
         {
-            this.term1 = term1;
-            this.term2 = term2;
-            this.term3 = term3;
-            this.term4 = term4;
-            termType1 = type1;
-            termType2 = type2;
-            termType3 = type3;
-            termType4 = type4;
 
+            setTerm(type1, term1);
+            setTerm(type2, term2);
+            setTerm(type3, term3);
+            setTerm(type4, term4);
+
+            SearchTerm st = new SearchTerm(canNum, code, animalName, breed, owner, town, state);
+            SearchResults sr = new SearchResults();
             InitializeComponent();
+            List<SearchResult> results = sr.retrieveData(st);
+            uxSearchResults.ItemsSource = results;
+            //uxSearchResults.Columns[0].Header = "TEST";
+        }
+
+        void setTerm(string type, string term)
+        {
+            switch (type)
+            {
+                case "Owner":
+                    owner = term;
+                    break;
+                case "Breed":
+                    breed = term;
+                    break;
+                case "Animal Name":
+                    animalName = term;
+                    break;
+                case "Code":
+                    code = term;
+                    break;
+                case "Can #":
+                    canNum = term;
+                    break;
+                case "Town":
+                    town = term;
+                    break;
+                case "State":
+                    state = term;
+                    break;
+            }
         }
 
     }
