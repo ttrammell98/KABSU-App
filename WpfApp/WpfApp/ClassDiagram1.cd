@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="WpfApp.MainWindow" BaseTypeListCollapsed="true">
-    <Position X="2.25" Y="0.5" Width="1.5" />
+    <Position X="8.25" Y="1" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAEAAAAEAAEAAgAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>MainWindow.xaml.cs</FileName>
@@ -13,7 +13,7 @@
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="WpfApp.RecordWindow" BaseTypeListCollapsed="true">
-    <Position X="5.25" Y="0.5" Width="1.5" />
+    <Position X="11.25" Y="1.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>RecordWindow.xaml.cs</FileName>
@@ -21,7 +21,7 @@
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="WpfApp.SearchWindow" BaseTypeListCollapsed="true">
-    <Position X="4" Y="2.5" Width="1.5" />
+    <Position X="5.5" Y="1" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAgAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAACAAAAAA=</HashCode>
       <FileName>SearchWindow.xaml.cs</FileName>
@@ -32,12 +32,46 @@
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="WpfApp.SearchWindowResults" BaseTypeListCollapsed="true">
-    <Position X="6.75" Y="3" Width="1.5" />
+    <Position X="2.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AgAAIAAAAEIAgAIAAAAAAAABIAgAAAgEAAAAAAAAAAA=</HashCode>
       <FileName>SearchWindowResults.xaml.cs</FileName>
     </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="searchTerm" />
+      <Field Name="searchResults" />
+    </ShowAsAssociation>
     <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="WpfApp.SearchResult">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Properties" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>BgAAIACAAiIAiAIABAggAAAAIAAYAAAEEAAABgIAAAA=</HashCode>
+      <FileName>SearchResult.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WpfApp.SearchResults">
+    <Position X="2.25" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAQAAAAAAAA=</HashCode>
+      <FileName>SearchResults.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="searchResult" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="WpfApp.SearchTerm">
+    <Position X="4.5" Y="3.75" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Properties" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AgAAIACAAiIAgAIAAAAgAAAAIAAAAAAEAAAABgIAAAA=</HashCode>
+      <FileName>SearchTerm.cs</FileName>
+    </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>

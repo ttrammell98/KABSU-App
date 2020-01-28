@@ -12,6 +12,7 @@ namespace WpfApp
 {
     public class SearchResults
     {
+        private SearchResult searchResult;
         public List<SearchResult> retrieveData(SearchTerm st)
         {
             string connectionString = "Server=localhost;Database=kabsu; User ID = appuser; Password = test; Integrated Security=true";
@@ -39,7 +40,7 @@ namespace WpfApp
 
                         while (reader.Read())
                         {
-                            resultList.Add(new SearchResult(
+                            searchResult= new SearchResult(
                                reader.GetBoolean(reader.GetOrdinal("Valid")).ToString(),
                                reader.GetString(reader.GetOrdinal("CanNum")),
                                reader.GetString(reader.GetOrdinal("AnimalID")),
@@ -50,7 +51,8 @@ namespace WpfApp
                                reader.GetString(reader.GetOrdinal("RegNum")),
                                reader.GetString(reader.GetOrdinal("PersonName")),
                                reader.GetString(reader.GetOrdinal("City")),
-                               reader.GetString(reader.GetOrdinal("State"))));
+                               reader.GetString(reader.GetOrdinal("State")));
+                            resultList.Add(searchResult);
                         }
 
                         return resultList;

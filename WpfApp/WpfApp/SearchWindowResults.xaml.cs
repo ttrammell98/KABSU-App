@@ -26,6 +26,9 @@ namespace WpfApp
         private string canNum = "*";
         private string town = "*";
         private string state = "*";
+        private SearchTerm searchTerm;
+        private SearchResults searchResults;
+        private List<SearchResult> results;
         public SearchWindowResults(String term1, String term2, String term3, String term4, String type1, String type2, String type3, String type4)
         {
 
@@ -34,12 +37,11 @@ namespace WpfApp
             setTerm(type3, term3);
             setTerm(type4, term4);
 
-            SearchTerm st = new SearchTerm(canNum, code, animalName, breed, owner, town, state);
-            SearchResults sr = new SearchResults();
+            searchTerm = new SearchTerm(canNum, code, animalName, breed, owner, town, state);
+            searchResults = new SearchResults();
             InitializeComponent();
-            List<SearchResult> results = sr.retrieveData(st);
+            results = searchResults.retrieveData(searchTerm);
             uxSearchResults.ItemsSource = results;
-            //uxSearchResults.Columns[0].Header = "TEST";
         }
 
         void setTerm(string type, string term)

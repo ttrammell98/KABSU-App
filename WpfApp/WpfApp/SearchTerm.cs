@@ -93,6 +93,16 @@ namespace WpfApp
                 this.state = value;
             }
         }
+        /// <summary>
+        /// Constructor for the object, taking in search fields from the Search Window
+        /// </summary>
+        /// <param name="canNum">The cane number of the animal</param>
+        /// <param name="code">The unique id of the animal</param>
+        /// <param name="animalName">The name of the animal</param>
+        /// <param name="breed">A breed of animal</param>
+        /// <param name="owner">The owner of an animal</param>
+        /// <param name="town">The town of origin</param>
+        /// <param name="state">The state of origin</param>
         public SearchTerm(string canNum, string code, string animalName, string breed, string owner, string town, string state)
         {
             this.CanNum = canNum;
