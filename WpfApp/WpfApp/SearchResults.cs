@@ -13,6 +13,12 @@ namespace WpfApp
     public class SearchResults
     {
         private SearchResult searchResult;
+
+        /// <summary>
+        /// Connects to the SQL Database and searches for the SearchTerm st and returns a list of results
+        /// </summary>
+        /// <param name="st">An instance of SearchTerm containing the different search parameters</param>
+        /// <returns>A list containing the results of the search</returns>
         public List<SearchResult> retrieveData(SearchTerm st)
         {
             string connectionString = "Server=localhost;Database=kabsu; User ID = appuser; Password = test; Integrated Security=true";
