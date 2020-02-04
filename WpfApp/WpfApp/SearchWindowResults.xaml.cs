@@ -26,6 +26,7 @@ namespace WpfApp
         private string canNum = "*";
         private string town = "*";
         private string state = "*";
+        private RecordWindow recordWindow;
         private SearchTerm searchTerm;
         private SearchResults searchResults;
         private List<SearchResult> results;
@@ -42,6 +43,14 @@ namespace WpfApp
             InitializeComponent();
             results = searchResults.retrieveData(searchTerm);
             uxSearchResults.ItemsSource = results;
+        }
+
+        private void Row_DoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            DataGridRow row = sender as DataGridRow;
+            SearchResult search= (SearchResult)row.Item;
+            recordWindow = new RecordWindow(search.CanNum);
+            recordWindow.Show();
         }
 
         void setTerm(string type, string term)

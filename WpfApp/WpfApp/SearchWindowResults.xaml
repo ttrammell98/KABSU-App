@@ -8,7 +8,11 @@
         Title="Search Results" Height="595" Width="1017.6" ResizeMode="CanMinimize">
     <Grid>
         <DataGrid x:Name="uxSearchResults" HorizontalAlignment="Left" Height="537" VerticalAlignment="Top" Width="982" Margin="10,10,0,0">
-
+            <DataGrid.Resources>
+                <Style TargetType="DataGridRow">
+                    <EventSetter Event="MouseDoubleClick" Handler="Row_DoubleClick"/>
+                </Style>
+            </DataGrid.Resources>
         </DataGrid>
 
     </Grid>

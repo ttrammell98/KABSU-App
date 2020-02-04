@@ -19,9 +19,17 @@ namespace WpfApp
     /// </summary>
     public partial class RecordWindow : Window
     {
+        private string canNum;
         public RecordWindow()
         {
             InitializeComponent();
+        }
+
+        public RecordWindow(string canNum)
+        {
+            this.canNum = canNum;
+            InitializeComponent();
+            uxCanNum.Text = canNum;
         }
     }
 }

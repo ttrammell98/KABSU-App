@@ -457,7 +457,7 @@
             <Label Grid.Column="3" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Content="NAME OF ANIMAL" FontSize="14"/>
             <Label Grid.Column="4" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Content="REG. NO." FontSize="14"/>
             <Label Grid.Column="5" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Content="OWNER" FontSize="14"/>
-            <TextBox Grid.Row="2" Grid.Column="0" FontSize="14"/>
+            <TextBox x:Name="uxCanNum" Grid.Row="2" Grid.Column="0" FontSize="14"/>
             <TextBox Grid.Row="2" Grid.Column="1" FontSize="14"/>
             <TextBox Grid.Row="2" Grid.Column="2" FontSize="14"/>
             <TextBox Grid.Row="2" Grid.Column="3" FontSize="14"/>
