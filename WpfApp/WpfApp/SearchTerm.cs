@@ -8,7 +8,9 @@ namespace WpfApp
 {
     public class SearchTerm
     {
-
+        /// <summary>
+        /// Various getters and setters
+        /// </summary>
         private string owner;
         public string Owner
         {
