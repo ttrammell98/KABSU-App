@@ -458,11 +458,11 @@
             <Label Grid.Column="4" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Content="REG. NO." FontSize="14"/>
             <Label Grid.Column="5" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Content="OWNER" FontSize="14"/>
             <TextBox x:Name="uxCanNum" Grid.Row="2" Grid.Column="0" FontSize="14"/>
-            <TextBox Grid.Row="2" Grid.Column="1" FontSize="14"/>
-            <TextBox Grid.Row="2" Grid.Column="2" FontSize="14"/>
-            <TextBox Grid.Row="2" Grid.Column="3" FontSize="14"/>
-            <TextBox Grid.Row="2" Grid.Column="4" FontSize="14"/>
-            <TextBox Grid.Row="2" Grid.Column="5" FontSize="14"/>
+            <TextBox x:Name="uxCode" Grid.Row="2" Grid.Column="1" FontSize="14"/>
+            <TextBox x:Name="uxBreed" Grid.Row="2" Grid.Column="2" FontSize="14"/>
+            <TextBox x:Name="uxAnimalName" Grid.Row="2" Grid.Column="3" FontSize="14"/>
+            <TextBox x:Name="uxRegNum" Grid.Row="2" Grid.Column="4" FontSize="14"/>
+            <TextBox x:Name="uxOwner" Grid.Row="2" Grid.Column="5" FontSize="14"/>
         </Grid>
     </Grid>
 </Window>
