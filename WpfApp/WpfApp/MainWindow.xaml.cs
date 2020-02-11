@@ -49,10 +49,5 @@ namespace WpfApp
             searchWindow = new SearchWindow();
             searchWindow.Show();
         }
-
-        void MainWindow_Closing(object sender, CancelEventArgs e)
-        {
-            MessageBox.Show("Test");
-        }
     }
 }

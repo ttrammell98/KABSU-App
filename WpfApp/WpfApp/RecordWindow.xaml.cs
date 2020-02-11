@@ -29,6 +29,7 @@ namespace WpfApp
         public RecordWindow()
         {
             InitializeComponent();
+            Closing += RecordWindow_Closing;
         }
 
         public RecordWindow(string canNum, string code, string breed, string animalName, string regNum, string owner)
@@ -46,10 +47,12 @@ namespace WpfApp
             uxRegNum.Text = regNum;
             uxOwner.Text = owner;
             uxCanNum.Text = canNum;
+            Closing += RecordWindow_Closing;
         }
-        void RecordWindow_Closing(object sender, CancelEventArgs e)
+
+        private void RecordWindow_Closing(object sender, CancelEventArgs e)
         {
-            MessageBox.Show("Test");
+            
         }
     }
 }
