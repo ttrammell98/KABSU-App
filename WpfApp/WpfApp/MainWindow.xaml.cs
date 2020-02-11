@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -36,7 +37,6 @@ namespace WpfApp
         {
             recordWindow = new RecordWindow();
             recordWindow.Show();
-            this.Close();
         }
 
         /// <summary>
@@ -48,7 +48,11 @@ namespace WpfApp
         {
             searchWindow = new SearchWindow();
             searchWindow.Show();
-            this.Close();
+        }
+
+        void MainWindow_Closing(object sender, CancelEventArgs e)
+        {
+            MessageBox.Show("Test");
         }
     }
 }

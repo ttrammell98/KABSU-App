@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -45,6 +46,10 @@ namespace WpfApp
             uxRegNum.Text = regNum;
             uxOwner.Text = owner;
             uxCanNum.Text = canNum;
+        }
+        void RecordWindow_Closing(object sender, CancelEventArgs e)
+        {
+            MessageBox.Show("Test");
         }
     }
 }
