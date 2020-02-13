@@ -96,9 +96,6 @@ C:\Users\shant\source\repos\KABSU-Inventory-App\WpfApp\WpfApp\bin\Debug\Google.P
 C:\Users\shant\source\repos\KABSU-Inventory-App\WpfApp\WpfApp\bin\Debug\MySql.Data.xml
 C:\Users\shant\source\repos\KABSU-Inventory-App\WpfApp\WpfApp\bin\Debug\Renci.SshNet.xml
 C:\Users\Jacob\Source\Repos\KABSU-Inventory-App\WpfApp\WpfApp\bin\Debug\xunit.abstractions.dll
-C:\Users\Jacob\Source\Repos\KABSU-Inventory-App\WpfApp\WpfApp\bin\Debug\xunit.runner.visualstudio.testadapter.dll
-C:\Users\Jacob\Source\Repos\KABSU-Inventory-App\WpfApp\WpfApp\bin\Debug\xunit.runner.reporters.net452.dll
-C:\Users\Jacob\Source\Repos\KABSU-Inventory-App\WpfApp\WpfApp\bin\Debug\xunit.runner.utility.net452.dll
 C:\Users\Jacob\Source\Repos\KABSU-Inventory-App\WpfApp\WpfApp\bin\Debug\WpfApp.exe.config
 C:\Users\Jacob\Source\Repos\KABSU-Inventory-App\WpfApp\WpfApp\bin\Debug\WpfApp.exe
 C:\Users\Jacob\Source\Repos\KABSU-Inventory-App\WpfApp\WpfApp\bin\Debug\WpfApp.pdb
@@ -135,3 +132,6 @@ C:\Users\Jacob\Source\Repos\KABSU-Inventory-App\WpfApp\WpfApp\obj\Debug\KABSUApp
 C:\Users\Jacob\Source\Repos\KABSU-Inventory-App\WpfApp\WpfApp\obj\Debug\KABSUApp.csproj.CopyComplete
 C:\Users\Jacob\Source\Repos\KABSU-Inventory-App\WpfApp\WpfApp\obj\Debug\WpfApp.exe
 C:\Users\Jacob\Source\Repos\KABSU-Inventory-App\WpfApp\WpfApp\obj\Debug\WpfApp.pdb
+C:\Users\Jacob\Source\Repos\KABSU-Inventory-App\WpfApp\WpfApp\bin\Debug\xunit.runner.visualstudio.testadapter.dll
+C:\Users\Jacob\Source\Repos\KABSU-Inventory-App\WpfApp\WpfApp\bin\Debug\xunit.runner.reporters.net452.dll
+C:\Users\Jacob\Source\Repos\KABSU-Inventory-App\WpfApp\WpfApp\bin\Debug\xunit.runner.utility.net452.dll
