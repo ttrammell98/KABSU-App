@@ -69,7 +69,7 @@ namespace WpfApp
             }
         }
         private string animalId;
-        public string AnimalName
+        public string AnimalId
         {
             get
             {

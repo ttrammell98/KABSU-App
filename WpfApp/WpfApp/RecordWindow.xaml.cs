@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,6 +13,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using MySql.Data.MySqlClient;
 
 namespace WpfApp
 {
@@ -26,7 +28,7 @@ namespace WpfApp
         private string animalName;
         private string regNum;
         private string owner;
-        private string id;
+        private static int ID_INDEX = 321;
         private static int ROW_SPACING = 32;
         public RecordWindow()
         {
@@ -34,7 +36,7 @@ namespace WpfApp
             Closing += RecordWindow_Closing;
         }
 
-        public RecordWindow(string canNum, string code, string breed, string animalName, string regNum, string owner, string id)
+        public RecordWindow(string canNum, string code, string breed, string animalName, string regNum, string owner)
         {
             this.canNum = canNum;
             this.code = code;
@@ -42,7 +44,6 @@ namespace WpfApp
             this.animalName = animalName;
             this.regNum = regNum;
             this.owner = owner;
-            this.id = id;
             InitializeComponent();
             uxCode.Text = code;
             uxBreed.Text = breed;
@@ -68,7 +69,7 @@ namespace WpfApp
             {
                 if (list[i] != "" || list[i + ROW_SPACING] != "" || list[i + (ROW_SPACING * 2)] != "" || list[i + (ROW_SPACING * 3)] != "" || list[i + (ROW_SPACING * 4)] != "")
                 {
-                    recordList.Add(new Record(list[i], list[i + ROW_SPACING], list[i + (ROW_SPACING * 2)], list[i + (ROW_SPACING * 3)], list[i + (ROW_SPACING * 4)], id));
+                    recordList.Add(new Record(list[i], list[i + ROW_SPACING], list[i + (ROW_SPACING * 2)], list[i + (ROW_SPACING * 3)], list[i + (ROW_SPACING * 4)], list[ID_INDEX]));
                     if (list[i] != "")
                         textCount--;
                     if (list[i + ROW_SPACING] != "")
@@ -81,6 +82,7 @@ namespace WpfApp
                         textCount--;
                 }
             }
+            StoreRecords(recordList);
         }
         public static IEnumerable<T> FindVisualChildren<T>(DependencyObject depObj) where T : DependencyObject
         {
@@ -99,6 +101,42 @@ namespace WpfApp
                         yield return childOfChild;
                     }
                 }
+            }
+        }
+        private void StoreRecords(List<Record> recordList)
+        {
+            string connectionString = "Server=localhost;Database=kabsu; User ID = appuser; Password = test; Integrated Security=true";
+            try
+            {
+                using (var connection = new MySqlConnection(connectionString))
+                {
+                    foreach(Record r in recordList)
+                    {
+                        using (var command = new MySqlCommand("kabsu.StoreData", connection))
+                        {
+                            command.CommandType = CommandType.StoredProcedure;
+
+                            command.Parameters.AddWithValue("@ToFrom", r.ToFrom);
+                            command.Parameters.AddWithValue("@Date", r.Date);
+                            command.Parameters.AddWithValue("@Received", Convert.ToInt32(r.Rec));
+                            command.Parameters.AddWithValue("@Shipped", Convert.ToInt32(r.Ship));
+                            command.Parameters.AddWithValue("@Balance", Convert.ToInt32(r.Balance));
+                            command.Parameters.AddWithValue("@AnimalID", r.AnimalId);
+                            connection.Open();
+                            int k = command.ExecuteNonQuery();
+                            connection.Close();
+                            if (k != 0)
+                            {
+                                MessageBox.Show("Records stored successfully.");
+                            }
+                        }
+                    }
+                    
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Unable to connect to database.");
             }
         }
     }
