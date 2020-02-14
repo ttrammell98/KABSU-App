@@ -52,6 +52,7 @@ namespace WpfApp
             uxOwner.Text = owner;
             uxCanNum.Text = canNum;
             Closing += RecordWindow_Closing;
+            List<Record> recordList = RetrieveRecords(code);
         }
 
         private void RecordWindow_Closing(object sender, CancelEventArgs e)
@@ -137,6 +138,46 @@ namespace WpfApp
             catch (Exception ex)
             {
                 MessageBox.Show("Unable to connect to database.");
+            }
+        }
+
+        private List<Record> RetrieveRecords(string id)
+        {
+            string connectionString = "Server=localhost;Database=kabsu; User ID = appuser; Password = test; Integrated Security=true";
+            try
+            {
+                using (var connection = new MySqlConnection(connectionString))
+                {
+                    using (var command = new MySqlCommand("kabsu.RetrieveRecords", connection))
+                    {
+                        command.CommandType = CommandType.StoredProcedure;
+
+                        command.Parameters.AddWithValue("@AnimalID", id);
+                        connection.Open();
+
+                        var reader = command.ExecuteReader();
+
+                        List<Record> recordList = new List<Record>();
+                        Record record;
+                        while (reader.Read())
+                        {
+                            record = new Record(
+                               reader.GetString(reader.GetOrdinal("ToFrom")),
+                               reader.GetString(reader.GetOrdinal("Date")),
+                               reader.GetInt32(reader.GetOrdinal("NumReceived")).ToString(),
+                               reader.GetInt32(reader.GetOrdinal("NumShipped")).ToString(),
+                               reader.GetInt32(reader.GetOrdinal("Balance")).ToString(), id);
+                            recordList.Add(record);
+                        }
+
+                        return recordList;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Unable to connect to database.");
+                return new List<Record>();
             }
         }
     }
