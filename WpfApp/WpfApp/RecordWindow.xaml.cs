@@ -53,6 +53,7 @@ namespace WpfApp
             uxCanNum.Text = canNum;
             Closing += RecordWindow_Closing;
             List<Record> recordList = RetrieveRecords(code);
+            PopulateRecords(recordList);
         }
 
         private void RecordWindow_Closing(object sender, CancelEventArgs e)
@@ -178,6 +179,22 @@ namespace WpfApp
             {
                 MessageBox.Show("Unable to connect to database.");
                 return new List<Record>();
+            }
+        }
+        private void PopulateRecords(List<Record> recordList)
+        {
+            int textCount = 0;
+            List<TextBox> textBoxes = (List<TextBox>)FindVisualChildren<TextBox>(this);
+            foreach (Record r in recordList)
+            {
+                textBoxes[textCount].Text = r.ToFrom;
+                textBoxes[textCount + ROW_SPACING].Text = r.Date;
+                textBoxes[textCount + (ROW_SPACING * 2)].Text = r.Rec;
+                textBoxes[textCount + (ROW_SPACING * 3)].Text = r.Ship;
+                textBoxes[textCount + (ROW_SPACING * 4)].Text = r.Balance;
+                textCount++;
+                if (textCount == 32)
+                    textCount += 128;
             }
         }
     }
