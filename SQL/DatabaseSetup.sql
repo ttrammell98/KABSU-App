@@ -28,22 +28,3 @@ NumUnits INT NOT NULL,
 PersonID INT NOT NULL,
 Notes VARCHAR(1000)
 );
-
-CREATE TABLE Record (
-AnimalID VARCHAR(32) NOT NULL,
-ToFrom VARCHAR(100) NOT NULL,
-Date VARCHAR(32) NOT NULL,
-NumReceived INT NOT NULL,
-NumShipped INT NOT NULL,
-Balance INT NOT NULL,
-FOREIGN KEY (AnimalID) REFERENCES kabsu.animal (AnimalID)
-);
-
-INSERT INTO Person (Name, City, State, Country)
-VALUES ('Mouse, Mickey', 'Beloit', 'KS', 'USA');
-
-INSERT INTO Animal (AnimalID, Name, Breed, Species, RegNum, PersonID)
-VALUES ('54XB445', '1 Oak', 'Cross', 'Cow', NULL, 1);
-
-INSERT INTO Sample (CanNum, CollDate, NumUnits, AnimalID, PersonID, Valid, Notes)
-VALUES ('0658', '43494', 10, '54XB445', 1, TRUE, NULL);
