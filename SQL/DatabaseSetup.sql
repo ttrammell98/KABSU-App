@@ -1,6 +1,5 @@
 DROP TABLE IF EXISTS Person;
 DROP TABLE IF EXISTS Animal;
-DROP TABLE IF EXISTS Sample;
 
 CREATE TABLE Person (
 Name VARCHAR(100) NOT NULL,
@@ -19,21 +18,3 @@ PersonID INT NOT NULL,
 FOREIGN KEY (PersonID) REFERENCES kabsu.person (PersonID)
 );
 
-CREATE TABLE Sample (
-Valid BOOL NOT NULL,
-CanNum VARCHAR(8) NOT NULL,
-AnimalID VARCHAR(32) NOT NULL,
-CollDate VARCHAR(32),
-NumUnits INT NOT NULL,
-PersonID INT NOT NULL,
-Notes VARCHAR(1000)
-);
-
-INSERT INTO Person (Name, City, State, Country)
-VALUES ('Mouse, Mickey', 'Beloit', 'KS', 'USA');
-
-INSERT INTO Animal (AnimalID, Name, Breed, Species, RegNum, PersonID)
-VALUES ('54XB445', '1 Oak', 'Cross', 'Cow', NULL, 1);
-
-INSERT INTO Sample (CanNum, CollDate, NumUnits, AnimalID, PersonID, Valid, Notes)
-VALUES ('0658', '43494', 10, '54XB445', 1, TRUE, NULL);
