@@ -30,6 +30,8 @@ namespace WpfApp
         private string owner;
         private static int ID_INDEX = 321;
         private static int ROW_SPACING = 32;
+        private List<Record> recordList;
+        private int oldRecordCount;
         public RecordWindow()
         {
             InitializeComponent();
@@ -44,6 +46,7 @@ namespace WpfApp
             this.animalName = animalName;
             this.regNum = regNum;
             this.owner = owner;
+            oldRecordCount = 0;
             InitializeComponent();
             uxCode.Text = code;
             uxBreed.Text = breed;
@@ -52,8 +55,7 @@ namespace WpfApp
             uxOwner.Text = owner;
             uxCanNum.Text = canNum;
             Closing += RecordWindow_Closing;
-            List<Record> recordList = RetrieveRecords(code);
-            PopulateRecords(recordList);
+            recordList = RetrieveRecords(code);
         }
 
         private void RecordWindow_Closing(object sender, CancelEventArgs e)
@@ -66,7 +68,7 @@ namespace WpfApp
                 if (tb.Text != "" && tb.Parent != uxBottomGrid)
                     textCount++;
             }
-            List<Record> recordList = new List<Record>();
+            recordList = new List<Record>();
             for(int i = 0; textCount > 0; i++)
             {
                 if (list[i] != "" || list[i + ROW_SPACING] != "" || list[i + (ROW_SPACING * 2)] != "" || list[i + (ROW_SPACING * 3)] != "" || list[i + (ROW_SPACING * 4)] != "")
@@ -84,7 +86,7 @@ namespace WpfApp
                         textCount--;
                 }
             }
-            StoreRecords(recordList);
+            StoreRecords();
         }
         public static IEnumerable<T> FindVisualChildren<T>(DependencyObject depObj) where T : DependencyObject
         {
@@ -105,7 +107,7 @@ namespace WpfApp
                 }
             }
         }
-        private void StoreRecords(List<Record> recordList)
+        private void StoreRecords()
         {
             string connectionString = "Server=localhost;Database=kabsu; User ID = appuser; Password = test; Integrated Security=true";
             try
@@ -114,22 +116,24 @@ namespace WpfApp
                 {
                     foreach(Record r in recordList)
                     {
-                        using (var command = new MySqlCommand("kabsu.StoreData", connection))
+                        if (oldRecordCount > 0)
+                            oldRecordCount--;
+                        else
                         {
-                            command.CommandType = CommandType.StoredProcedure;
-
-                            command.Parameters.AddWithValue("@ToFrom", r.ToFrom);
-                            command.Parameters.AddWithValue("@Date", r.Date);
-                            command.Parameters.AddWithValue("@Received", Convert.ToInt32(r.Rec));
-                            command.Parameters.AddWithValue("@Shipped", Convert.ToInt32(r.Ship));
-                            command.Parameters.AddWithValue("@Balance", Convert.ToInt32(r.Balance));
-                            command.Parameters.AddWithValue("@AnimalID", r.AnimalId);
-                            connection.Open();
-                            int k = command.ExecuteNonQuery();
-                            connection.Close();
-                            if (k != 0)
+                            using (var command = new MySqlCommand("kabsu.StoreData", connection))
                             {
-                                MessageBox.Show("Records stored successfully.");
+                                command.CommandType = CommandType.StoredProcedure;
+
+                                command.Parameters.AddWithValue("@ToFrom", r.ToFrom);
+                                command.Parameters.AddWithValue("@Date", r.Date);
+                                command.Parameters.AddWithValue("@Received", Convert.ToInt32(r.Rec));
+                                command.Parameters.AddWithValue("@Shipped", Convert.ToInt32(r.Ship));
+                                command.Parameters.AddWithValue("@Balance", Convert.ToInt32(r.Balance));
+                                command.Parameters.AddWithValue("@AnimalID", r.AnimalId);
+
+                                connection.Open();
+                                int k = command.ExecuteNonQuery();
+                                connection.Close();
                             }
                         }
                     }
@@ -158,7 +162,7 @@ namespace WpfApp
 
                         var reader = command.ExecuteReader();
 
-                        List<Record> recordList = new List<Record>();
+                        recordList = new List<Record>();
                         Record record;
                         while (reader.Read())
                         {
@@ -169,8 +173,8 @@ namespace WpfApp
                                reader.GetInt32(reader.GetOrdinal("NumShipped")).ToString(),
                                reader.GetInt32(reader.GetOrdinal("Balance")).ToString(), id);
                             recordList.Add(record);
+                            oldRecordCount++;
                         }
-
                         return recordList;
                     }
                 }
@@ -181,10 +185,14 @@ namespace WpfApp
                 return new List<Record>();
             }
         }
-        private void PopulateRecords(List<Record> recordList)
+
+        private void RecordWindow_Load(object sender, RoutedEventArgs e)
         {
             int textCount = 0;
-            List<TextBox> textBoxes = (List<TextBox>)FindVisualChildren<TextBox>(this);
+
+            IEnumerable<TextBox> textBoxEnum = (IEnumerable<TextBox>)FindVisualChildren<TextBox>(this);
+            List<TextBox> textBoxes = textBoxEnum.ToList<TextBox>();
+
             foreach (Record r in recordList)
             {
                 textBoxes[textCount].Text = r.ToFrom;
@@ -192,7 +200,9 @@ namespace WpfApp
                 textBoxes[textCount + (ROW_SPACING * 2)].Text = r.Rec;
                 textBoxes[textCount + (ROW_SPACING * 3)].Text = r.Ship;
                 textBoxes[textCount + (ROW_SPACING * 4)].Text = r.Balance;
+
                 textCount++;
+
                 if (textCount == 32)
                     textCount += 128;
             }

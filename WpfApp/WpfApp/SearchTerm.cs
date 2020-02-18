@@ -95,6 +95,18 @@ namespace WpfApp
                 this.state = value;
             }
         }
+        /*private string date;
+        public string Date
+        {
+            get
+            {
+                return this.date;
+            }
+            set
+            {
+                this.date = value;
+            }
+        }*/
         /// <summary>
         /// Constructor for the object, taking in search fields from the Search Window
         /// </summary>
@@ -114,6 +126,7 @@ namespace WpfApp
             this.Owner = owner;
             this.Town = town;
             this.State = state;
+            //this.Date = date;
         }
     }
 }

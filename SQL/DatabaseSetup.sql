@@ -28,3 +28,13 @@ NumUnits INT NOT NULL,
 PersonID INT NOT NULL,
 Notes VARCHAR(1000)
 );
+
+CREATE TABLE Record (
+AnimalID VARCHAR(32) NOT NULL,
+ToFrom VARCHAR(100) NOT NULL,
+Date VARCHAR(32) NOT NULL,
+NumReceived INT NOT NULL,
+NumShipped INT NOT NULL,
+Balance INT NOT NULL,
+FOREIGN KEY (AnimalID) REFERENCES kabsu.animal (AnimalID)
+);
