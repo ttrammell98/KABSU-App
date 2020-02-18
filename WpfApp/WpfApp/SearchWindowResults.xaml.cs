@@ -43,6 +43,7 @@ namespace WpfApp
             InitializeComponent();
             results = searchResults.retrieveData(searchTerm);
             uxSearchResults.ItemsSource = results;
+            uxSearchResults.MaxColumnWidth = 100;
         }
 
         private void Row_DoubleClick(object sender, MouseButtonEventArgs e)
