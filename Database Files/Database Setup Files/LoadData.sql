@@ -36,10 +36,10 @@ ENCLOSED BY '"'
 LINES TERMINATED BY '\n'
 IGNORE 1 ROWS;
 
-INSERT INTO sample
-(SELECT Valid, CanNum, TS.Code, CollDate, NumUnits, P.PersonID, Notes
+INSERT INTO sample (Valid, CanNum, AnimalID, CollDate, NumUnits, PersonID, Notes)
+SELECT Valid, CanNum, TS.Code, CollDate, NumUnits, P.PersonID, Notes
 FROM tempsample TS
-	INNER JOIN person P ON P.PersonName EQUALS TS.PersonName AND P.Town EQUALS TS.Town
-	INNER JOIN animal A ON A.AnimalID EQUALS TS.Code);
+	INNER JOIN person P ON P.PersonName = TS.PersonName AND P.Town = TS.Town
+	INNER JOIN animal A ON A.AnimalID = TS.Code);
 
 DROP TABLE tempsample;
