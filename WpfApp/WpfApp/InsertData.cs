@@ -17,7 +17,16 @@ namespace WpfApp
             {
                 using (var connection = new MySqlConnection(connectionString))
                 {
-                    
+                    using (var command = new MySqlCommand("kabsu.InsertPerson", connection))
+                    {
+                        command.CommandType = CommandType.StoredProcedure;
+
+                        command.Parameters.AddWithValue("@PersonID", personID);
+                        command.Parameters.AddWithValue("@Name", name);
+                        command.Parameters.AddWithValue("@City", city);
+                        command.Parameters.AddWithValue("@State", state);
+                        command.Parameters.AddWithValue("@Country", country);
+                    }
                 }
             }
             catch (Exception e)
