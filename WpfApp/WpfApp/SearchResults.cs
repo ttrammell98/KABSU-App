@@ -47,7 +47,7 @@ namespace WpfApp
                         while (reader.Read())
                         {
                             searchResult= new SearchResult(
-                               reader.GetBoolean(reader.GetOrdinal("Valid")).ToString(),
+                               reader.GetString(reader.GetOrdinal("Valid")),
                                reader.GetString(reader.GetOrdinal("CanNum")),
                                reader.GetString(reader.GetOrdinal("AnimalID")),
                                reader.GetString(reader.GetOrdinal("CollDate")),
@@ -65,7 +65,7 @@ namespace WpfApp
                     }
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
                 MessageBox.Show("Unable to connect to database.");
                 return new List<SearchResult>();
