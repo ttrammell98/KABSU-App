@@ -26,7 +26,8 @@ AnimalID VARCHAR(32) NOT NULL,
 CollDate VARCHAR(32),
 NumUnits INT NOT NULL,
 PersonID INT NOT NULL,
-Notes VARCHAR(1000)
+Notes VARCHAR(1000),
+FOREIGN KEY (PersonID) REFERENCES kabsu.person (AnimalID)
 );
 
 CREATE TABLE Record (
