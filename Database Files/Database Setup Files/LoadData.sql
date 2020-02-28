@@ -39,7 +39,7 @@ IGNORE 1 ROWS;
 INSERT INTO sample (Valid, CanNum, AnimalID, CollDate, NumUnits, PersonID, Notes)
 SELECT Valid, CanNum, TS.Code, CollDate, NumUnits, P.PersonID, Notes
 FROM tempsample TS
-	INNER JOIN person P ON P.Name = TS.PersonName AND P.CityRetrieveData = TS.Town
+	INNER JOIN person P ON P.Name = TS.PersonName AND P.City = TS.Town
 	INNER JOIN animal A ON A.AnimalID = TS.Code;
 
 DROP TABLE tempsample;
