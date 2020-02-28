@@ -19,33 +19,22 @@ namespace WpfApp
     /// </summary>
     public partial class SearchWindowResults : Window
     {
-        private string owner = "*";
-        private string breed = "*";
-        private string animalName = "*";
-        private string code = "*";
-        private string canNum = "*";
-        private string town = "*";
-        private string state = "*";
         private RecordWindow recordWindow;
-        private SearchTerm searchTerm;
-        private SearchResults searchResults;
-        private List<SearchResult> results;
-        public SearchWindowResults(String term1, String term2, String term3, String term4, String type1, String type2, String type3, String type4)
+        public SearchWindowResults(List<SearchResult> results)
         {
-
-            setTerm(type1, term1);
-            setTerm(type2, term2);
-            setTerm(type3, term3);
-            setTerm(type4, term4);
-
-            searchTerm = new SearchTerm(canNum, code, animalName, breed, owner, town, state);
-            searchResults = new SearchResults();
             InitializeComponent();
-            results = searchResults.retrieveData(searchTerm);
             uxSearchResults.ItemsSource = results;
-            uxSearchResults.MaxColumnWidth = 100;
-            //uxSearchResults.Columns[0].Header = "INV";
-            //uxSearchResults.Columns[1].Header = "Can Num";
+            ValidColumn.Width = 40;
+            CanNumColumn.Width = 50;
+            CodeColumn.Width = 110;
+            CollDateColumn.Width = 90;
+            UnitsColumn.Width = 40;
+            AnimalNameColumn.Width = 225;
+            BreedColumn.Width = 80;
+            RegNumColumn.Width = 80;
+            OwnerColumn.Width = 100;
+            TownColumn.Width = 100;
+            StateColumn.Width = 42;
         }
 
         private void Row_DoubleClick(object sender, MouseButtonEventArgs e)
@@ -54,34 +43,6 @@ namespace WpfApp
             SearchResult search= (SearchResult)row.Item;
             recordWindow = new RecordWindow(search.CanNum, search.Code, search.Breed, search.AnimalName, search.RegNum, search.Owner);
             recordWindow.Show();
-        }
-
-        void setTerm(string type, string term)
-        {
-            switch (type)
-            {
-                case "Owner":
-                    owner = term;
-                    break;
-                case "Breed":
-                    breed = term;
-                    break;
-                case "Animal Name":
-                    animalName = term;
-                    break;
-                case "Code":
-                    code = term;
-                    break;
-                case "Can #":
-                    canNum = term;
-                    break;
-                case "Town":
-                    town = term;
-                    break;
-                case "State":
-                    state = term;
-                    break;
-            }
         }
 
     }

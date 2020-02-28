@@ -19,6 +19,15 @@ namespace WpfApp
     /// </summary>
     public partial class SearchWindow : Window
     {
+        private string owner = "*";
+        private string breed = "*";
+        private string animalName = "*";
+        private string code = "*";
+        private string canNum = "*";
+        private string town = "*";
+        private string state = "*";
+        private SearchResults searchResults;
+        private SearchTerm searchTerm;
         SearchWindowResults windowResults;
         public SearchWindow()
         {
@@ -34,9 +43,61 @@ namespace WpfApp
         // Upon clicking "Search," opens a search results window and closes this window
         private void UxSearch_Click(object sender, RoutedEventArgs e)
         {
-            windowResults = new SearchWindowResults(uxSearchContents1.Text, uxSearchContents2.Text, uxSearchContents3.Text, uxSearchContents4.Text, uxSearchTerm1.Text, uxSearchTerm2.Text, uxSearchTerm3.Text, uxSearchTerm4.Text);
+            windowResults = new SearchWindowResults(CalculateResultList());
             windowResults.Show();
             this.Close();
+        }
+
+        private void UxUnitSum_Click(object sender, RoutedEventArgs e)
+        {
+            List<SearchResult> results = CalculateResultList();
+            int unitSum = 0;
+            foreach (SearchResult sr in results)
+            {
+                unitSum += Convert.ToInt32(sr.Units);
+            }
+            MessageBox.Show("Sum of Units: " + unitSum);
+        }
+
+        void SetTerm(string term, string contents)
+        {
+            switch (term)
+            {
+                case "Owner":
+                    owner = contents;
+                    break;
+                case "Breed":
+                    breed = contents;
+                    break;
+                case "Animal Name":
+                    animalName = contents;
+                    break;
+                case "Code":
+                    code = contents;
+                    break;
+                case "Can #":
+                    canNum = contents;
+                    break;
+                case "Town":
+                    town = contents;
+                    break;
+                case "State":
+                    state = contents;
+                    break;
+            }
+        }
+        private List<SearchResult> CalculateResultList()
+        {
+            SetTerm(uxSearchTerm1.Text, uxSearchContents1.Text);
+            SetTerm(uxSearchTerm2.Text, uxSearchContents2.Text);
+            SetTerm(uxSearchTerm3.Text, uxSearchContents3.Text);
+            SetTerm(uxSearchTerm4.Text, uxSearchContents4.Text);
+
+            searchTerm = new SearchTerm(canNum, code, animalName, breed, owner, town, state);
+            searchTerm = new SearchTerm(canNum, code, animalName, breed, owner, town, state);
+            searchResults = new SearchResults();
+            List<SearchResult> results = searchResults.retrieveData(searchTerm);
+            return results;
         }
     }
 }
