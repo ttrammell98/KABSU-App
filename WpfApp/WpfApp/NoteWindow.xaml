@@ -1,0 +1,12 @@
+﻿<Window x:Name="uxNoteWindow" x:Class="WpfApp.NoteWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp"
+        mc:Ignorable="d"
+        Title="NoteWindow" Height="279.79" Width="518.084" Closing="NoteWindow_Closing" Loaded="NoteWindow_Loaded">
+    <Grid>
+        <TextBox x:Name="uxNotesText" HorizontalAlignment="Left" Height="224" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="482" Margin="10,10,0,0"/>
+    </Grid>
+</Window>
