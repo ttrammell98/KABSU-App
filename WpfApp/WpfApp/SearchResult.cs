@@ -206,6 +206,8 @@ namespace WpfApp
             this.Owner = owner;
             this.Town = town;
             this.State = state;
+            this.Country = country;
+            this.Species = species;
         }
 
         public SearchResult()

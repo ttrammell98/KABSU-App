@@ -25,6 +25,9 @@ namespace WpfApp
         SearchResult searchResult;
         private string notes;
         private string oldCode;
+        private string oldOwner;
+        private string oldCity;
+        private string oldState;
         private AdditionalInfo info;
         private static int ID_INDEX = 321;
         private static int ROW_SPACING = 32;
@@ -53,6 +56,9 @@ namespace WpfApp
             newRecord = false;
             searchResult = search;
             oldCode = searchResult.Code;
+            oldOwner = searchResult.Owner;
+            oldCity = searchResult.Town;
+            oldState = searchResult.State;
             InitializeComponent();
             uxCode.Text = searchResult.Code;
             uxBreed.Text = searchResult.Breed;
@@ -274,9 +280,12 @@ namespace WpfApp
                             command.Parameters.AddWithValue("@SCollDate", uxMorphDate.Text);
                             command.Parameters.AddWithValue("@SNumUnits", uxMorphUnits.Text);
                             command.Parameters.AddWithValue("@PCity", info.City);
+                            command.Parameters.AddWithValue("@OldCity", oldCity);
                             command.Parameters.AddWithValue("@PState", info.State);
+                            command.Parameters.AddWithValue("@OldState", oldState);
                             command.Parameters.AddWithValue("@PCountry", info.Country);
                             command.Parameters.AddWithValue("@POwner", uxOwner.Text);
+                            command.Parameters.AddWithValue("@OldOwner", oldOwner);
                             command.Parameters.AddWithValue("@AAnimalName", uxAnimalName.Text);
                             command.Parameters.AddWithValue("@ABreed", uxBreed.Text);
                             command.Parameters.AddWithValue("@ASpecies", info.Species);
