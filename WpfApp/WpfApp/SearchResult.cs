@@ -153,7 +153,30 @@ namespace WpfApp
                 this.state = value;
             }
         }
-
+        private string country;
+        public string Country
+        {
+            get
+            {
+                return this.country;
+            }
+            set
+            {
+                this.country = value;
+            }
+        }
+        private string species;
+        public string Species
+        {
+            get
+            {
+                return this.species;
+            }
+            set
+            {
+                this.species = value;
+            }
+        }
         /// <summary>
         /// A constructor for SearchResult
         /// </summary>
@@ -168,7 +191,9 @@ namespace WpfApp
         /// <param name="owner">The owner of the sample</param>
         /// <param name="town">The town where the owner resides</param>
         /// <param name="state">The state where the owner resides</param>
-        public SearchResult(string valid, string canNum, string code, string collDate, string units, string animalName, string breed, string regNum, string owner, string town, string state)
+        /// <param name="country">The country where the owner resides</param>
+        /// <param name="species">The species of the animal</param>
+        public SearchResult(string valid, string canNum, string code, string collDate, string units, string animalName, string breed, string regNum, string owner, string town, string state, string country, string species)
         {
             this.INV = valid;
             this.CanNum = canNum;
@@ -181,6 +206,12 @@ namespace WpfApp
             this.Owner = owner;
             this.Town = town;
             this.State = state;
+            this.Country = country;
+            this.Species = species;
+        }
+
+        public SearchResult()
+        {
         }
     }
 }

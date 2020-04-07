@@ -44,7 +44,7 @@ namespace WpfApp
         private void UxSearch_Click(object sender, RoutedEventArgs e)
         {
             windowResults = new SearchWindowResults(CalculateResultList());
-            windowResults.Show();
+            windowResults.ShowDialog();
             this.Close();
         }
 
@@ -64,25 +64,25 @@ namespace WpfApp
             switch (term)
             {
                 case "Owner":
-                    owner = contents;
+                    owner = "%" + contents + "%";
                     break;
                 case "Breed":
-                    breed = contents;
+                    breed = "%" + contents + "%";
                     break;
                 case "Animal Name":
-                    animalName = contents;
+                    animalName = "%" + contents + "%";
                     break;
                 case "Code":
-                    code = contents;
+                    code = "%" + contents + "%";
                     break;
                 case "Can #":
-                    canNum = contents;
+                    canNum = "%" + contents + "%";
                     break;
                 case "Town":
-                    town = contents;
+                    town = "%" + contents + "%";
                     break;
                 case "State":
-                    state = contents;
+                    state = "%" + contents + "%";
                     break;
             }
         }

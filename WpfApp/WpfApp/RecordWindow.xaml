@@ -5,9 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp"
         mc:Ignorable="d"
-        Title="Record Window" Height="827.6" Width="1549.6" Loaded="RecordWindow_Load">
+        Title="Record Window" Height="914.6" Width="1549.6" Loaded="RecordWindow_Load">
     <Grid ShowGridLines="True" Margin="0,0,0.4,1.2">
-        <Grid x:Name="uxTopGrid1" HorizontalAlignment="Left" Height="703" VerticalAlignment="Top" Width="751" Margin="10,81,0,0">
+        <Grid x:Name="uxTopGrid1" HorizontalAlignment="Left" Height="703" VerticalAlignment="Top" Width="751" Margin="10,145,0,0">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="276" />
                 <ColumnDefinition Width="155.25" />
@@ -220,7 +220,7 @@
             <TextBox x:Name="uxBalLeft31" Grid.Row="32" Grid.Column="4" FontSize="14"/>
             <TextBox x:Name="uxBalLeft32" Grid.Row="33" Grid.Column="4" FontSize="14"/>
         </Grid>
-        <Grid x:Name="uxTopGrid2" HorizontalAlignment="Left" Height="703" VerticalAlignment="Top" Width="751" Margin="774,81,0,0">
+        <Grid x:Name="uxTopGrid2" HorizontalAlignment="Left" Height="703" VerticalAlignment="Top" Width="751" Margin="774,145,0,0">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="276" />
                 <ColumnDefinition Width="155.25" />
@@ -464,5 +464,36 @@
             <TextBox x:Name="uxRegNum" Grid.Row="2" Grid.Column="4" FontSize="14"/>
             <TextBox x:Name="uxOwner" Grid.Row="2" Grid.Column="5" FontSize="14"/>
         </Grid>
+        <Grid x:Name="uxMorphGrid" HorizontalAlignment="Left" Height="67" VerticalAlignment="Top" Width="751" Margin="10,82,0,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="276" />
+                <ColumnDefinition Width="73.5" />
+                <ColumnDefinition Width="79.8" />
+                <ColumnDefinition Width="85.25"/>
+                <ColumnDefinition Width="122.4"/>
+                <ColumnDefinition Width="109.4"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="45" />
+                <RowDefinition Height="21" />
+            </Grid.RowDefinitions>
+            <Label HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="14">
+                <TextBlock><Run Text="   RECEIVED"/><LineBreak/><Run Text="DATE FROZEN"/></TextBlock>
+            </Label>
+            <Label Grid.Column="1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Content="VIGOR" FontSize="14"/>
+            <Label Grid.Column="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Content="MOT." FontSize="14"/>
+            <Label Grid.Column="3" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Content="MORPH" FontSize="14"/>
+            <Label Grid.Column="4" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="14">
+                <TextBlock><Run Text="COLL"/><LineBreak/><Run Text="CODE"/></TextBlock>
+            </Label>
+            <Label Grid.Column="5" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Content="UNITS" FontSize="14"/>
+            <TextBox x:Name="uxMorphDate" Grid.Row="2" Grid.Column="0" FontSize="14" TextChanged="MorphChanged"/>
+            <TextBox x:Name="uxVigor" Grid.Row="2" Grid.Column="1" FontSize="14" TextChanged="MorphChanged"/>
+            <TextBox x:Name="uxMot" Grid.Row="2" Grid.Column="2" FontSize="14" TextChanged="MorphChanged"/>
+            <TextBox x:Name="uxMorph" Grid.Row="2" Grid.Column="3" FontSize="14" TextChanged="MorphChanged"/>
+            <TextBox x:Name="uxMorphCode" Grid.Row="2" Grid.Column="4" FontSize="14" TextChanged="MorphChanged"/>
+            <TextBox x:Name="uxMorphUnits" Grid.Row="2" Grid.Column="5" FontSize="14" TextChanged="MorphChanged"/>
+        </Grid>
+        <Button x:Name="uxNotesButton" Content="Notes" HorizontalAlignment="Left" VerticalAlignment="Top" Width="109" Margin="1416,112,0,0" Height="37" Click="UxNotesButton_Click"/>
     </Grid>
 </Window>

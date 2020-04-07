@@ -1,0 +1,30 @@
+﻿<Window x:Name="uxInfoWindow" x:Class="WpfApp.AdditionalInfoWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp"
+        mc:Ignorable="d"
+        Title="Additional Info" Height="209.773" Width="278.092" Closing="InfoWindow_Closing" Loaded="UxInfoWindow_Loaded">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="201*"/>
+            <ColumnDefinition Width="122*"/>
+        </Grid.ColumnDefinitions>
+        <TextBox x:Name="uxCityText" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Margin="132,41,0,0" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="uxSpeciesText" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Margin="132,10,0,0" Grid.ColumnSpan="2"/>
+        <Label Content="Species" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,0,0"/>
+        <Label Content="City" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,41,0,0"/>
+        <Label Content="State" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,72,0,0"/>
+        <Label Content="Country" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,103,0,0"/>
+        <Label Content="INV (TRUE or FALSE)" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,134,0,0"/>
+        <TextBox x:Name="uxStateText" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Margin="132,72,0,0" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="uxCountryText" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Margin="132,103,0,0" Grid.ColumnSpan="2"/>
+        <ComboBox x:Name="uxValidBox" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Grid.ColumnSpan="2" Margin="132,134,0,0">
+            <ComboBoxItem Name ="uxValidTrue" Content="TRUE"/>
+            <ComboBoxItem Name ="uxValidFalse" Content="FALSE"/>
+        </ComboBox>
+
+
+    </Grid>
+</Window>

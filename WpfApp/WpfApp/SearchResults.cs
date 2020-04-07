@@ -21,7 +21,7 @@ namespace WpfApp
         /// <returns>A list containing the results of the search</returns>
         public List<SearchResult> retrieveData(SearchTerm st)
         {
-            string connectionString = "Server=localhost;Database=kabsu; User ID = appuser; Password = test; Integrated Security=true";
+            string connectionString = "Server=mysql.cs.ksu.edu;Database=kabsu; User ID = kabsu; Password = insecurepassword; Integrated Security=true";
             try
             {
                 using (var connection = new MySqlConnection(connectionString))
@@ -57,7 +57,9 @@ namespace WpfApp
                                reader.GetString(reader.GetOrdinal("RegNum")),
                                reader.GetString(reader.GetOrdinal("PersonName")),
                                reader.GetString(reader.GetOrdinal("City")),
-                               reader.GetString(reader.GetOrdinal("State")));
+                               reader.GetString(reader.GetOrdinal("State")),
+                               reader.GetString(reader.GetOrdinal("Country")),
+                               reader.GetString(reader.GetOrdinal("Species")));
                             resultList.Add(searchResult);
                         }
 
