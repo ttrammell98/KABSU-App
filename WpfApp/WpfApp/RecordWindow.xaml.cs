@@ -22,13 +22,10 @@ namespace WpfApp
     /// </summary>
     public partial class RecordWindow : Window
     {
-        private string canNum;
-        private string code;
-        private string breed;
-        private string animalName;
-        private string regNum;
-        private string owner;
+        SearchResult searchResult;
         private string notes;
+        private string oldCode;
+        private AdditionalInfo info;
         private static int ID_INDEX = 321;
         private static int ROW_SPACING = 32;
         private static int MORPH_ID = 326;
@@ -37,40 +34,48 @@ namespace WpfApp
         private bool isMorph;
         private bool isOldMorph;
         private bool populating;
+        private bool newRecord;
+        private bool isOldRecord;
         private NoteWindow noteWindow;
+        private AdditionalInfoWindow infoWindow;
         public RecordWindow()
         {
+            newRecord = true;
+            isOldRecord = false;
+            searchResult = new SearchResult();
             InitializeComponent();
             notes = "";
             Closing += RecordWindow_Closing;
         }
 
-        public RecordWindow(string canNum, string code, string breed, string animalName, string regNum, string owner)
+        public RecordWindow(SearchResult search)
         {
-            this.canNum = canNum;
-            this.code = code;
-            this.breed = breed;
-            this.animalName = animalName;
-            this.regNum = regNum;
-            this.owner = owner;
+            newRecord = false;
+            searchResult = search;
+            oldCode = searchResult.Code;
             InitializeComponent();
-            uxCode.Text = code;
-            uxBreed.Text = breed;
-            uxAnimalName.Text = animalName;
-            uxRegNum.Text = regNum;
-            uxOwner.Text = owner;
-            uxCanNum.Text = canNum;
+            uxCode.Text = searchResult.Code;
+            uxBreed.Text = searchResult.Breed;
+            uxAnimalName.Text = searchResult.AnimalName;
+            uxRegNum.Text = searchResult.RegNum;
+            uxOwner.Text = searchResult.Owner;
+            uxCanNum.Text = searchResult.CanNum;
             notes = "";
             isMorph = false;
             isOldMorph = false;
             populating = false;
             Closing += RecordWindow_Closing;
-            recordList = RetrieveRecords(code);
-            morph = RetrieveMorph(code);
+            recordList = RetrieveRecords(searchResult.Code);
+            morph = RetrieveMorph(searchResult.Code);
         }
 
         private void RecordWindow_Closing(object sender, CancelEventArgs e)
         {
+            CollectAdditionalInfo();
+
+            this.IsEnabled = false;
+
+            StoreParent();
             List<string> list = new List<string>();
             List<string> morphList = new List<string>();
             int textCount = 0;
@@ -134,7 +139,7 @@ namespace WpfApp
         {
             if (recordList != null)
             {
-                string connectionString = "Server=localhost;Database=kabsu; User ID = appuser; Password = test; Integrated Security=true";
+                string connectionString = "Server=mysql.cs.ksu.edu;Database=kabsu; User ID = kabsu; Password = insecurepassword; Integrated Security=true";
                 try
                 {
                     using (var connection = new MySqlConnection(connectionString))
@@ -143,7 +148,7 @@ namespace WpfApp
                         {
                             command.CommandType = CommandType.StoredProcedure;
 
-                            command.Parameters.AddWithValue("@ID", code);
+                            command.Parameters.AddWithValue("@ID", searchResult.Code);
                             connection.Open();
                             int k = command.ExecuteNonQuery();
                             connection.Close();
@@ -180,7 +185,7 @@ namespace WpfApp
         {
             if (isMorph == true && isOldMorph == false)
             {
-                string connectionString = "Server=localhost;Database=kabsu; User ID = appuser; Password = test; Integrated Security=true";
+                string connectionString = "Server=mysql.cs.ksu.edu;Database=kabsu; User ID = kabsu; Password = insecurepassword; Integrated Security=true";
                 try
                 {
                     using (var connection = new MySqlConnection(connectionString))
@@ -190,13 +195,92 @@ namespace WpfApp
                             command.CommandType = CommandType.StoredProcedure;
 
                             command.Parameters.AddWithValue("@Notes", morph.Notes);
-                            command.Parameters.AddWithValue("@Date", morph.Date);
+                            command.Parameters.AddWithValue("@Date", uxMorphDate.Text);
                             command.Parameters.AddWithValue("@Vigor", Convert.ToInt32(morph.Vigor));
                             command.Parameters.AddWithValue("@Mot", Convert.ToInt32(morph.Mot));
                             command.Parameters.AddWithValue("@Morph", Convert.ToInt32(morph.Morphology));
                             command.Parameters.AddWithValue("@Code", Convert.ToInt32(morph.Code));
-                            command.Parameters.AddWithValue("@Units", Convert.ToInt32(morph.Units));
+                            command.Parameters.AddWithValue("@Units", Convert.ToInt32(uxMorphUnits.Text));
                             command.Parameters.AddWithValue("@ID", morph.Id);
+
+                            connection.Open();
+                            int k = command.ExecuteNonQuery();
+                            connection.Close();
+                        }
+
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Unable to connect to database.");
+                }
+            }
+        }
+
+        private void StoreParent()
+        {
+            if (newRecord == true)
+            {
+                string connectionString = "Server=mysql.cs.ksu.edu;Database=kabsu; User ID = kabsu; Password = insecurepassword; Integrated Security=true";
+                try
+                {
+                    using (var connection = new MySqlConnection(connectionString))
+                    {
+                        using (var command = new MySqlCommand("kabsu.StoreParent", connection))
+                        {
+                            command.CommandType = CommandType.StoredProcedure;
+
+                            command.Parameters.AddWithValue("@Valid", info.Valid.ToString().ToUpper());
+                            command.Parameters.AddWithValue("@CanNum", uxCanNum.Text);
+                            command.Parameters.AddWithValue("@AnimalID", uxCode.Text);
+                            command.Parameters.AddWithValue("@CollDate", uxMorphDate.Text);
+                            command.Parameters.AddWithValue("@NumUnits", uxMorphUnits.Text);
+                            command.Parameters.AddWithValue("@City", info.City);
+                            command.Parameters.AddWithValue("@State", info.State);
+                            command.Parameters.AddWithValue("@Country", info.Country);
+                            command.Parameters.AddWithValue("@Owner", uxOwner.Text);
+                            command.Parameters.AddWithValue("@AnimalName", uxAnimalName.Text);
+                            command.Parameters.AddWithValue("@Breed", uxBreed.Text);
+                            command.Parameters.AddWithValue("@Species", info.Species);
+                            command.Parameters.AddWithValue("@RegNum", uxRegNum.Text);
+
+                            connection.Open();
+                            int k = command.ExecuteNonQuery();
+                            connection.Close();
+                        }
+
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Unable to connect to database.");
+                }
+            }
+            else
+            {
+                string connectionString = "Server=mysql.cs.ksu.edu;Database=kabsu; User ID = kabsu; Password = insecurepassword; Integrated Security=true";
+                try
+                {
+                    using (var connection = new MySqlConnection(connectionString))
+                    {
+                        using (var command = new MySqlCommand("kabsu.UpdateParent", connection))
+                        {
+                            command.CommandType = CommandType.StoredProcedure;
+
+                            command.Parameters.AddWithValue("@SValid", info.Valid.ToString().ToUpper());
+                            command.Parameters.AddWithValue("@SCanNum", uxCanNum.Text);
+                            command.Parameters.AddWithValue("@OldAnimalID", oldCode);
+                            command.Parameters.AddWithValue("@AAnimalID", uxCode.Text);
+                            command.Parameters.AddWithValue("@SCollDate", uxMorphDate.Text);
+                            command.Parameters.AddWithValue("@SNumUnits", uxMorphUnits.Text);
+                            command.Parameters.AddWithValue("@PCity", info.City);
+                            command.Parameters.AddWithValue("@PState", info.State);
+                            command.Parameters.AddWithValue("@PCountry", info.Country);
+                            command.Parameters.AddWithValue("@POwner", uxOwner.Text);
+                            command.Parameters.AddWithValue("@AAnimalName", uxAnimalName.Text);
+                            command.Parameters.AddWithValue("@ABreed", uxBreed.Text);
+                            command.Parameters.AddWithValue("@ASpecies", info.Species);
+                            command.Parameters.AddWithValue("@ARegNum", uxRegNum.Text);
 
                             connection.Open();
                             int k = command.ExecuteNonQuery();
@@ -214,7 +298,7 @@ namespace WpfApp
 
         private List<Record> RetrieveRecords(string id)
         {
-            string connectionString = "Server=localhost;Database=kabsu; User ID = appuser; Password = test; Integrated Security=true";
+            string connectionString = "Server=mysql.cs.ksu.edu;Database=kabsu; User ID = kabsu; Password = insecurepassword; Integrated Security=true";
             try
             {
                 using (var connection = new MySqlConnection(connectionString))
@@ -253,7 +337,7 @@ namespace WpfApp
 
         private Morph RetrieveMorph(string id)
         {
-            string connectionString = "Server=localhost;Database=kabsu; User ID = appuser; Password = test; Integrated Security=true";
+            string connectionString = "Server=mysql.cs.ksu.edu;Database=kabsu; User ID = kabsu; Password = insecurepassword; Integrated Security=true";
             try
             {
                 using (var connection = new MySqlConnection(connectionString))
@@ -318,36 +402,45 @@ namespace WpfApp
             }
             if (morph != null)
             {
-                populating = true;
                 textBoxes[MORPH_ID].Text = morph.Date;
-                populating = true;
                 textBoxes[MORPH_ID + 1].Text = morph.Vigor;
-                populating = true;
                 textBoxes[MORPH_ID + 2].Text = morph.Mot;
-                populating = true;
                 textBoxes[MORPH_ID + 3].Text = morph.Morphology;
-                populating = true;
                 textBoxes[MORPH_ID + 4].Text = morph.Code;
-                populating = true;
                 textBoxes[MORPH_ID + 5].Text = morph.Units;
             }
-
+            if (searchResult.Units != null)
+            {
+                uxMorphUnits.Text = searchResult.Units;
+            }
+            if (searchResult.CollDate != null)
+            {
+                uxMorphDate.Text = searchResult.CollDate;
+            }
+            isOldMorph = true;
         }
 
         private void MorphChanged(object sender, TextChangedEventArgs e)
         {
-            if (populating)
-                populating = false;
-            else
-                isOldMorph = false;
+            isOldMorph = false;
         }
 
         private void UxNotesButton_Click(object sender, RoutedEventArgs e)
         {
             noteWindow = new NoteWindow(notes);
             noteWindow.Check += value => notes = value;
-            noteWindow.Show();
+            noteWindow.ShowDialog();
             isOldMorph = false;
+        }
+        private void CollectAdditionalInfo()
+        {
+            if (newRecord == true)
+                info = new AdditionalInfo();
+            else
+                info = new AdditionalInfo(searchResult.Species, searchResult.Town, searchResult.State, searchResult.Country, Convert.ToBoolean(searchResult.INV.ToLower()));
+            infoWindow = new AdditionalInfoWindow(info);
+            infoWindow.Check += value => info = value;
+            infoWindow.ShowDialog();
         }
     }
 

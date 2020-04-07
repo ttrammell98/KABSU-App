@@ -44,7 +44,7 @@ namespace WpfApp
         private void UxSearch_Click(object sender, RoutedEventArgs e)
         {
             windowResults = new SearchWindowResults(CalculateResultList());
-            windowResults.Show();
+            windowResults.ShowDialog();
             this.Close();
         }
 

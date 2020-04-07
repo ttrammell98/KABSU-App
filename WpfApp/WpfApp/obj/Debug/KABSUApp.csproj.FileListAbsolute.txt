@@ -153,3 +153,5 @@ C:\Users\e10d1\source\repos\KABSU-Inventory-App\WpfApp\WpfApp\obj\Debug\KABSUApp
 C:\Users\e10d1\source\repos\KABSU-Inventory-App\WpfApp\WpfApp\bin\Debug\xunit.abstractions.xml
 C:\Users\Jacob\Source\Repos\KABSU-Inventory-App\WpfApp\WpfApp\obj\Debug\NoteWindow.g.cs
 C:\Users\Jacob\Source\Repos\KABSU-Inventory-App\WpfApp\WpfApp\obj\Debug\NoteWindow.baml
+C:\Users\Jacob\Source\Repos\KABSU-Inventory-App\WpfApp\WpfApp\obj\Debug\AdditionalInfoWindow.g.cs
+C:\Users\Jacob\Source\Repos\KABSU-Inventory-App\WpfApp\WpfApp\obj\Debug\AdditionalInfoWindow.baml

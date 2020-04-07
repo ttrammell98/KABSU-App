@@ -41,8 +41,8 @@ namespace WpfApp
         {
             DataGridRow row = sender as DataGridRow;
             SearchResult search= (SearchResult)row.Item;
-            recordWindow = new RecordWindow(search.CanNum, search.Code, search.Breed, search.AnimalName, search.RegNum, search.Owner);
-            recordWindow.Show();
+            recordWindow = new RecordWindow(search);
+            recordWindow.ShowDialog();
         }
 
     }

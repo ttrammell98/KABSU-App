@@ -96,6 +96,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="AdditionalInfo.cs" />
+    <Compile Include="AdditionalInfoWindow.xaml.cs">
+      <DependentUpon>AdditionalInfoWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="InsertData.cs" />
     <Compile Include="DataLoad.cs" />
     <Compile Include="Morph.cs" />
@@ -116,6 +120,10 @@
     <Compile Include="SearchWindowResults.xaml.cs">
       <DependentUpon>SearchWindowResults.xaml</DependentUpon>
     </Compile>
+    <Page Include="AdditionalInfoWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
